@@ -222,17 +222,17 @@ img { max-width: 100%; display: block; }
 
 /* ABOUT -------------------------------------------------- */
 .ak-about { position: relative; overflow: hidden; padding: var(--pad) 0; background: var(--white); }
-.about-art { position: relative; width: min(100%, 440px); margin: 0 auto; padding: 0 9% 12% 0; }
-.about-back { position: absolute; z-index: 0; right: 2%; top: 7%; width: 82%; height: 84%; border-radius: 999px 999px 26px 26px; background: var(--pink-50); border: 1.5px solid var(--pink-300); }
-.about-dots { position: absolute; z-index: 0; left: -6%; bottom: 4%; width: 110px; height: 110px; background-image: radial-gradient(var(--pink) 1.6px, transparent 1.7px); background-size: 14px 14px; opacity: .45; }
-.about-main { position: relative; z-index: 1; aspect-ratio: 4 / 5; margin: 0; border-radius: 999px 999px 26px 26px; overflow: hidden; background: var(--plum-100); box-shadow: var(--shadow-lg); }
-.about-main img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.4s var(--ease); }
-.about-main::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(115deg, transparent 38%, rgba(255,255,255,.3) 50%, transparent 62%); background-size: 260% 100%; background-position: 130% 0; animation: aboutShine 8s ease-in-out 1s infinite; }
-@keyframes aboutShine { 0%, 65% { background-position: 130% 0; } 100% { background-position: -130% 0; } }
-.about-art:hover .about-main img { transform: scale(1.04); }
-.about-small { position: absolute; z-index: 2; right: 0; bottom: 0; width: 46%; aspect-ratio: 1; margin: 0; border-radius: 50%; overflow: hidden; border: 6px solid var(--white); box-shadow: 0 0 0 2px var(--pink), var(--shadow-lg); animation: aboutFloat 7s ease-in-out infinite; }
-.about-small img { width: 100%; height: 100%; object-fit: cover; }
-@keyframes aboutFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.about-art { position: relative; width: min(100%, 540px); aspect-ratio: 1 / 1.08; margin: 0 auto; }
+.about-glow { position: absolute; inset: 8% 4% 4% 8%; border-radius: 40px; background: radial-gradient(closest-side, var(--pink-100), transparent); filter: blur(24px); }
+.about-card { position: absolute; margin: 0; padding: 10px 10px 0; border-radius: 22px; background: var(--white); box-shadow: 0 2px 4px rgba(42,19,54,.06), 0 30px 60px -28px rgba(42,19,54,.45); transition: transform .7s var(--ease), box-shadow .7s var(--ease); }
+.about-card img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 14px; }
+.about-card figcaption { display: flex; align-items: center; gap: .5rem; padding: .7rem .35rem .8rem; font-family: var(--font-display); font-size: 1.05rem; color: var(--plum); }
+.about-card figcaption::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--pink); }
+.about-card.a1 { z-index: 1; left: 0; top: 0; width: 70%; transform: rotate(-4deg); }
+.about-card.a2 { z-index: 2; right: 0; bottom: 0; width: 58%; transform: rotate(5deg); }
+.about-art:hover .about-card.a1 { transform: rotate(-6deg) translate(-6px, -6px); }
+.about-art:hover .about-card.a2 { transform: rotate(7deg) translate(6px, 6px); }
+@media (max-width: 575.98px) { .about-card { padding: 7px 7px 0; border-radius: 18px; } .about-card figcaption { font-size: .9rem; padding: .55rem .25rem .6rem; } }
 
 .about-copy { max-width: 36rem; }
 .about-copy .sec-title { margin-bottom: 1rem; font-size: clamp(2rem, 4.4vw, 3rem); }
