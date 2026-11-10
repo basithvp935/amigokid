@@ -1,0 +1,1459 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>AMIGO Kid | Kids Shoes, School Bags &amp; Sunglasses Online in Kerala</title>
+  <meta name="description" content="Shop cute, comfy kids' shoes, school bags, sunglasses and accessories at AMIGO Kid. Affordable prices, Cash on Delivery and easy returns across India.">
+  <meta name="theme-color" content="#111111">
+  <link rel="canonical" href="https://www.amigokid.in/"><!-- TODO: your real domain -->
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AMIGO Kid | Kids Shoes, School Bags & Sunglasses Online in Kerala">
+  <meta property="og:description" content="Cute, comfy kids' shoes, school bags, sunglasses & accessories. Cash on Delivery & easy returns across India.">
+  <meta property="og:image" content="assets/og-image.jpg"><!-- TODO: 1200x630 image -->
+  <meta property="og:locale" content="en_IN">
+
+  <!-- Mark that JS is on, so scroll animations only hide content when they can reveal it -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Hero image preload (largest image above the fold) -->
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1542422784-cd6a92a7e4b3?auto=format&fit=crop&w=720&h=900&q=75" fetchpriority="high">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "AMIGO Kid",
+    "description": "Kids' shoes, school bags, sunglasses and accessories in Kerala, India.",
+    "url": "https://www.amigokid.in/",
+    "telephone": "+91-99999-99999",
+    "address": { "@type": "PostalAddress", "addressRegion": "Kerala", "addressCountry": "IN" },
+    "sameAs": ["https://www.instagram.com/amigo___kid"],
+    "paymentAccepted": "UPI, Cash on Delivery, Credit Card, Debit Card",
+    "currenciesAccepted": "INR"
+  }
+  </script>
+
+  <style>
+    /* =========================================================
+       1. BRAND TOKENS
+       ========================================================= */
+    :root {
+      --ak-pink:   #FF1F8E;
+      --ak-cyan:   #00BDF2;
+      --ak-yellow: #FFF200;
+      --ak-green:  #0BA63C;
+      --ak-plum:   #B0287A;
+      --ak-dark:   #111111;
+      --ak-white:  #FFFFFF;
+      --ak-soft:   #FFF0F7;
+
+      --ak-green-text: #087A2D;   /* accessible green for small text on white */
+      --ak-muted: #5C5C66;
+      --ak-line: #F1E4EC;
+      --ak-photo-bg: #F6F3F5;
+
+      --ak-font-head: 'Fredoka', 'Baloo 2', system-ui, sans-serif;
+      --ak-font-body: 'Poppins', 'Nunito', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+      --ak-radius-sm: 16px;
+      --ak-radius:    20px;
+      --ak-radius-lg: 24px;
+      --ak-radius-xl: 32px;
+      --ak-shadow:    0 1px 2px rgba(17,17,17,.04), 0 10px 30px -10px rgba(17,17,17,.14);
+      --ak-shadow-lg: 0 2px 4px rgba(17,17,17,.04), 0 24px 48px -16px rgba(176,40,122,.28);
+      --ak-ease: cubic-bezier(.2,.7,.2,1);
+
+      --bs-body-font-family: var(--ak-font-body);
+      --bs-body-color: var(--ak-dark);
+      --bs-link-color: var(--ak-plum);
+      --bs-link-color-rgb: 176, 40, 122;
+      --bs-link-hover-color: var(--ak-pink);
+      --bs-link-hover-color-rgb: 255, 31, 142;
+    }
+
+    /* =========================================================
+       2. BASE
+       ========================================================= */
+    * { -webkit-tap-highlight-color: transparent; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--ak-font-body); color: var(--ak-dark); background: #fff; overflow-x: clip; -webkit-font-smoothing: antialiased; font-size: .97rem; }
+    h1, h2, h3, h4, h5, h6, .ak-head { font-family: var(--ak-font-head); font-weight: 600; letter-spacing: -.01em; }
+    img { max-width: 100%; display: block; }
+    :focus-visible { outline: 3px solid var(--ak-cyan); outline-offset: 3px; border-radius: 10px; }
+    .skip-link { position: absolute; left: -999px; top: 8px; z-index: 2000; background: var(--ak-yellow); color: var(--ak-dark); padding: .6rem 1rem; border-radius: 999px; font-weight: 700; }
+    .skip-link:focus { left: 8px; }
+
+    /* Scroll progress bar */
+    .scroll-progress-bar { position: fixed; top: 0; left: 0; height: 3px; width: 100%; z-index: 1100; transform-origin: 0 50%; transform: scaleX(0); background: linear-gradient(90deg, var(--ak-pink), var(--ak-plum) 50%, var(--ak-cyan)); pointer-events: none; }
+
+    /* =========================================================
+       3. SCROLL REVEAL ANIMATIONS
+       ========================================================= */
+    .js [data-reveal] { opacity: 0; transition: opacity .9s var(--ak-ease) var(--d, 0s), transform .9s var(--ak-ease) var(--d, 0s), clip-path 1.1s var(--ak-ease) var(--d, 0s); will-change: opacity, transform; }
+    .js [data-reveal="up"]    { transform: translate3d(0, 36px, 0); }
+    .js [data-reveal="down"]  { transform: translate3d(0, -24px, 0); }
+    .js [data-reveal="left"]  { transform: translate3d(-40px, 0, 0); }
+    .js [data-reveal="right"] { transform: translate3d(40px, 0, 0); }
+    .js [data-reveal="zoom"]  { transform: scale(.9); }
+    .js [data-reveal="fade"]  { transform: none; }
+    .js [data-reveal="clip"]  { opacity: 1; clip-path: inset(14% 14% 14% 14% round var(--ak-radius-xl)); transform: scale(1.04); }
+    .js [data-reveal].in { opacity: 1; transform: none; }
+    .js [data-reveal="clip"].in { clip-path: inset(0 0 0 0 round var(--ak-radius-xl)); }
+
+    /* animated highlight under key words */
+    .u { background-image: linear-gradient(var(--ak-yellow), var(--ak-yellow)); background-repeat: no-repeat; background-position: 0 88%; background-size: 100% 36%; padding: 0 .08em; border-radius: 4px; }
+    .js [data-reveal] .u { background-size: 0% 36%; transition: background-size 1s var(--ak-ease) calc(var(--d, 0s) + .35s); }
+    .js [data-reveal].in .u { background-size: 100% 36%; }
+
+    /* =========================================================
+       4. BUTTONS
+       ========================================================= */
+    .btn-ak { position: relative; overflow: hidden; display: inline-flex; align-items: center; justify-content: center; gap: .55rem; min-height: 50px; padding: .8rem 1.6rem; border-radius: 999px; border: 1.5px solid transparent; font-family: var(--ak-font-body); font-weight: 600; font-size: 1rem; line-height: 1.1; letter-spacing: .01em; text-decoration: none; cursor: pointer; transition: transform .3s var(--ak-ease), box-shadow .3s var(--ak-ease), background-color .25s, color .25s, border-color .25s; isolation: isolate; }
+    .btn-ak::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,.35) 50%, transparent 70%); transform: translateX(-120%); transition: transform .7s var(--ak-ease); }
+    .btn-ak:hover::after { transform: translateX(120%); }
+    .btn-ak:hover { transform: translateY(-2px); }
+    .btn-ak:active { transform: scale(.96); }
+    .btn-ak .bi-arrow-right { transition: transform .3s var(--ak-ease); }
+    .btn-ak:hover .bi-arrow-right { transform: translateX(4px); }
+    .btn-ak-pink   { background: var(--ak-pink); color: #fff; box-shadow: 0 10px 24px -8px rgba(255,31,142,.65); }
+    .btn-ak-pink:hover { background: var(--ak-plum); color: #fff; box-shadow: 0 14px 28px -10px rgba(176,40,122,.7); }
+    .btn-ak-green  { background: var(--ak-green); color: #fff; box-shadow: 0 10px 24px -8px rgba(11,166,60,.6); }
+    .btn-ak-green:hover { background: #088a32; color: #fff; }
+    .btn-ak-yellow { background: var(--ak-yellow); color: var(--ak-dark); box-shadow: 0 10px 24px -8px rgba(17,17,17,.45); }
+    .btn-ak-yellow:hover { background: #fff; color: var(--ak-dark); }
+    .btn-ak-dark   { background: var(--ak-dark); color: #fff; }
+    .btn-ak-dark:hover { background: var(--ak-plum); color: #fff; }
+    .btn-ak-ghost  { background: rgba(255,255,255,.08); color: #fff; border-color: rgba(255,255,255,.25); backdrop-filter: blur(8px); }
+    .btn-ak-ghost:hover { background: #fff; color: var(--ak-dark); }
+    .btn-ak-sm { min-height: 44px; padding: .55rem 1rem; font-size: .9rem; }
+    .btn-ak.is-bounce { animation: btnBounce .5s ease; }
+    @keyframes btnBounce { 0%{transform:scale(1)} 30%{transform:scale(.92)} 60%{transform:scale(1.05)} 100%{transform:scale(1)} }
+
+    /* =========================================================
+       5. ANNOUNCEMENT BAR
+       ========================================================= */
+    .ak-announce { background: var(--ak-pink); color: #fff; font-weight: 600; font-size: .8rem; letter-spacing: .02em; }
+    .ak-announce .inner { min-height: 36px; display: flex; align-items: center; justify-content: center; gap: .9rem; text-align: center; padding: .3rem 0; }
+    .ak-announce .msg { display: none; align-items: center; gap: .4rem; }
+    .ak-announce .msg.active { display: inline-flex; animation: fadeUp .45s var(--ak-ease); }
+    .ak-announce .sep { display: none; opacity: .55; }
+    .ak-announce a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+    @media (min-width: 768px) {
+      .ak-announce .msg { display: inline-flex !important; animation: none !important; }
+      .ak-announce .sep { display: inline; }
+    }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+    /* =========================================================
+       6. HEADER
+       ========================================================= */
+    .ak-header { background: rgba(17,17,17,.96); z-index: 1030; transition: background-color .3s, box-shadow .3s; }
+    @supports (backdrop-filter: blur(10px)) { .ak-header { background: rgba(17,17,17,.82); backdrop-filter: saturate(160%) blur(16px); -webkit-backdrop-filter: saturate(160%) blur(16px); } }
+    .ak-header.scrolled { box-shadow: 0 10px 30px -12px rgba(0,0,0,.55); }
+    .ak-header .bar { min-height: 68px; display: flex; align-items: center; gap: .5rem; transition: min-height .3s var(--ak-ease); }
+    .ak-header.scrolled .bar { min-height: 58px; }
+
+    .ak-logo { display: inline-flex; align-items: baseline; gap: .3rem; text-decoration: none; line-height: 1; font-family: var(--ak-font-head); font-weight: 700; font-size: 1.7rem; letter-spacing: .02em; white-space: nowrap; }
+    .ak-logo .l { display: inline-block; transform: rotate(var(--r, 0deg)); transition: transform .35s var(--ak-ease); }
+    .ak-logo .l1 { color: var(--ak-pink);   --r: -5deg; }
+    .ak-logo .l2 { color: var(--ak-yellow); --r: 3deg; }
+    .ak-logo .l3 { color: var(--ak-cyan);   --r: -2deg; }
+    .ak-logo .l4 { color: var(--ak-green);  --r: 4deg; }
+    .ak-logo .l5 { color: #E04FA6;          --r: -3deg; }
+    .ak-logo .kid { color: #fff; font-size: .6em; font-weight: 500; }
+    .ak-logo img { height: 44px; width: auto; }
+    .ak-logo:hover .l { transform: rotate(0) translateY(-2px); }
+
+    .ak-nav .nav-link { position: relative; color: rgba(255,255,255,.88); font-weight: 500; font-size: .93rem; padding: .5rem .8rem !important; transition: color .2s; }
+    .ak-nav .nav-link::after { content: ""; position: absolute; left: .8rem; right: .8rem; bottom: .2rem; height: 2px; border-radius: 2px; background: var(--ak-pink); transform: scaleX(0); transform-origin: left; transition: transform .35s var(--ak-ease); }
+    .ak-nav .nav-link:hover, .ak-nav .nav-link.active { color: #fff; }
+    .ak-nav .nav-link:hover::after, .ak-nav .nav-link.active::after { transform: scaleX(1); }
+
+    .ak-icon-btn { position: relative; width: 44px; height: 44px; border-radius: 50%; border: 0; background: transparent; color: #fff; display: inline-grid; place-items: center; font-size: 1.25rem; transition: background-color .2s, transform .2s; text-decoration: none; }
+    .ak-icon-btn:hover { background: rgba(255,255,255,.12); color: #fff; }
+    .ak-count { position: absolute; top: 3px; right: 1px; min-width: 18px; height: 18px; padding: 0 4px; border-radius: 9px; background: var(--ak-pink); color: #fff; font-size: .65rem; font-weight: 700; display: grid; place-items: center; line-height: 1; }
+    .ak-count[data-zero="true"] { display: none; }
+    .ak-count.pop { animation: btnBounce .45s ease; }
+
+    .ak-search { border-top: 1px solid rgba(255,255,255,.08); }
+    .ak-search .form-control { border-radius: 999px; min-height: 48px; padding-left: 1.2rem; border: 1.5px solid transparent; }
+    .ak-search .form-control:focus { border-color: var(--ak-cyan); box-shadow: none; }
+
+    .ak-offcanvas { background: var(--ak-dark); color: #fff; width: min(330px, 86vw) !important; }
+    .ak-offcanvas .btn-close { filter: invert(1); opacity: .9; }
+    .ak-mnav a { display: flex; align-items: center; gap: .8rem; min-height: 54px; padding: .25rem .9rem; border-radius: 16px; color: #fff; text-decoration: none; font-family: var(--ak-font-head); font-size: 1.15rem; font-weight: 500; opacity: 0; transform: translateX(-16px); transition: opacity .4s var(--ak-ease), transform .4s var(--ak-ease), background-color .2s; }
+    .offcanvas.show .ak-mnav a { opacity: 1; transform: none; }
+    .ak-mnav a:nth-child(2){transition-delay:.04s}.ak-mnav a:nth-child(3){transition-delay:.08s}.ak-mnav a:nth-child(4){transition-delay:.12s}.ak-mnav a:nth-child(5){transition-delay:.16s}.ak-mnav a:nth-child(6){transition-delay:.2s}.ak-mnav a:nth-child(7){transition-delay:.24s}
+    .ak-mnav a:hover { background: rgba(255,255,255,.07); color: var(--ak-yellow); }
+    .ak-mnav .dot { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+
+    .ak-cart { background: #fff; color: var(--ak-dark); width: min(400px, 92vw) !important; }
+    .cart-item { display: flex; gap: .8rem; align-items: center; padding: .8rem 0; border-bottom: 1px solid var(--ak-line); }
+    .cart-thumb { width: 68px; height: 68px; flex: none; border-radius: 14px; overflow: hidden; background: var(--ak-photo-bg); }
+    .cart-thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .qty { display: inline-flex; align-items: center; border: 1.5px solid var(--ak-line); border-radius: 999px; }
+    .qty button { width: 34px; height: 34px; border: 0; background: transparent; font-weight: 700; font-size: 1.05rem; border-radius: 50%; }
+    .qty span { min-width: 22px; text-align: center; font-weight: 600; }
+
+    /* =========================================================
+       7. HERO
+       ========================================================= */
+    .ak-hero { position: relative; overflow: hidden; color: #fff; padding: 2.5rem 0 4.5rem;
+      background:
+        radial-gradient(520px circle at 88% 18%, rgba(255,31,142,.38), transparent 62%),
+        radial-gradient(460px circle at 6% 92%, rgba(0,189,242,.22), transparent 60%),
+        radial-gradient(380px circle at 50% 110%, rgba(176,40,122,.35), transparent 60%),
+        var(--ak-dark); }
+    .ak-hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5;
+      background-image: radial-gradient(rgba(255,255,255,.07) 1px, transparent 1px); background-size: 22px 22px;
+      -webkit-mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%); mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%); }
+    .ak-eyebrow { display: inline-flex; align-items: center; gap: .5rem; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14); padding: .4rem 1rem .4rem .45rem; border-radius: 999px; font-weight: 500; font-size: .82rem; backdrop-filter: blur(6px); }
+    .ak-eyebrow b { background: var(--ak-yellow); color: var(--ak-dark); border-radius: 999px; padding: .15rem .55rem; font-size: .72rem; font-weight: 700; letter-spacing: .04em; }
+    .ak-hero h1 { font-size: clamp(2.5rem, 10vw, 4.6rem); line-height: 1.02; margin: 1.1rem 0 1rem; font-weight: 600; letter-spacing: -.02em; }
+    .grad-text { background: linear-gradient(100deg, var(--ak-pink) 0%, #FF6FB5 35%, var(--ak-yellow) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .ak-hero .lead { color: rgba(255,255,255,.78); font-size: clamp(1rem, 3.6vw, 1.15rem); font-weight: 400; max-width: 30rem; line-height: 1.65; }
+    .ak-hero .cta { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
+    .hero-proof { display: flex; align-items: center; gap: .85rem; margin-top: 1.75rem; }
+    .hero-proof .avatars { display: flex; }
+    .hero-proof .avatars img { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 2px solid var(--ak-dark); margin-left: -10px; }
+    .hero-proof .avatars img:first-child { margin-left: 0; }
+    .hero-proof .stars { color: var(--ak-yellow); font-size: .8rem; letter-spacing: 1px; }
+    .hero-proof small { display: block; color: rgba(255,255,255,.7); font-size: .8rem; }
+
+    .hero-visual { position: relative; max-width: 440px; margin: 2.75rem auto 0; padding: 0 1.25rem; }
+    .hero-frame { position: relative; border-radius: var(--ak-radius-xl); padding: 5px; background: linear-gradient(140deg, var(--ak-pink), var(--ak-plum) 45%, var(--ak-cyan)); box-shadow: 0 40px 80px -30px rgba(255,31,142,.55); }
+    .hero-frame .ph { border-radius: 28px; overflow: hidden; aspect-ratio: 4 / 5; background: #222; }
+    .hero-frame img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.06); transition: transform 1.6s var(--ak-ease); }
+    .hero-frame.in img, .no-motion .hero-frame img { transform: scale(1); }
+    .glass-card { position: absolute; z-index: 3; display: flex; align-items: center; gap: .65rem; padding: .55rem .9rem .55rem .55rem; border-radius: 18px; color: #fff;
+      background: rgba(28,28,28,.55); border: 1px solid rgba(255,255,255,.18); backdrop-filter: blur(16px) saturate(140%); -webkit-backdrop-filter: blur(16px) saturate(140%); box-shadow: 0 18px 40px -16px rgba(0,0,0,.6); }
+    .glass-card img { width: 46px; height: 46px; border-radius: 12px; object-fit: cover; }
+    .glass-card .t { font-size: .76rem; color: rgba(255,255,255,.75); line-height: 1.2; }
+    .glass-card .p { font-family: var(--ak-font-head); font-weight: 600; font-size: 1rem; }
+    .glass-card .p .bi { color: var(--ak-yellow); }
+    .gc-1 { left: -.25rem; top: 12%; }
+    .gc-2 { right: -.25rem; bottom: 14%; }
+    .gc-3 { left: 8%; bottom: -1.1rem; padding: .55rem 1rem; gap: .5rem; background: var(--ak-yellow); color: var(--ak-dark); border: 0; font-weight: 600; font-size: .85rem; }
+    .gc-3 .bi { color: var(--ak-green-text); font-size: 1.05rem; }
+    .float { animation: float 6s ease-in-out infinite; }
+    .float.f2 { animation-delay: -2s; } .float.f3 { animation-delay: -4s; }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+    .spark { position: absolute; pointer-events: none; z-index: 1; }
+    .spark.s1 { width: 22px; height: 22px; top: 12%; left: 5%; color: var(--ak-yellow); animation: twinkle 3.5s ease-in-out infinite; }
+    .spark.s2 { width: 14px; height: 14px; top: 30%; right: 42%; color: var(--ak-cyan); animation: twinkle 4s ease-in-out -1.5s infinite; }
+    .spark.s3 { width: 10px; height: 10px; border-radius: 50%; background: var(--ak-pink); bottom: 22%; left: 44%; animation: float 5s ease-in-out infinite; }
+    .spark.s4 { width: 54px; height: 18px; bottom: 12%; left: 4%; color: var(--ak-green); opacity: .8; animation: float 6s ease-in-out -2s infinite; }
+    .spark.s5 { width: 18px; height: 18px; top: 8%; right: 8%; border: 2.5px solid var(--ak-cyan); border-radius: 50%; animation: float 7s ease-in-out -3s infinite; }
+    .spark svg { width: 100%; height: 100%; display: block; }
+    @keyframes twinkle { 0%, 100% { transform: scale(1) rotate(0); opacity: 1; } 50% { transform: scale(.6) rotate(45deg); opacity: .5; } }
+
+    @media (min-width: 992px) {
+      .ak-hero { padding: 4.5rem 0 6.5rem; }
+      .hero-visual { margin-top: 0; max-width: 470px; }
+      .gc-1 { left: -2.5rem; } .gc-2 { right: -2.5rem; }
+    }
+
+    /* Benefits marquee */
+    .ak-marquee { position: relative; overflow: hidden; background: linear-gradient(90deg, var(--ak-pink), var(--ak-plum)); color: #fff; padding: .85rem 0; }
+    .ak-marquee .track { display: flex; width: max-content; animation: marquee 32s linear infinite; }
+    .ak-marquee:hover .track { animation-play-state: paused; }
+    .ak-marquee .item { display: inline-flex; align-items: center; gap: .55rem; padding: 0 1.75rem; font-family: var(--ak-font-head); font-weight: 500; font-size: 1.02rem; white-space: nowrap; }
+    .ak-marquee .item svg { width: 16px; height: 16px; color: var(--ak-yellow); }
+    @keyframes marquee { to { transform: translateX(-50%); } }
+
+    /* =========================================================
+       8. SECTIONS
+       ========================================================= */
+    .ak-section { padding: 3.5rem 0; position: relative; }
+    .ak-soft { background: var(--ak-soft); }
+    @media (min-width: 768px) { .ak-section { padding: 5.5rem 0; } }
+    .sec-head { margin-bottom: 2rem; }
+    .sec-kicker { display: inline-flex; align-items: center; gap: .4rem; color: var(--ak-plum); background: rgba(176,40,122,.08); font-weight: 600; text-transform: uppercase; letter-spacing: .12em; font-size: .7rem; padding: .35rem .8rem; border-radius: 999px; margin-bottom: .75rem; }
+    .ak-soft .sec-kicker { background: #fff; }
+    .sec-title { font-size: clamp(1.75rem, 6vw, 2.75rem); margin: 0; line-height: 1.12; }
+    .sec-sub { color: var(--ak-muted); margin: .6rem 0 0; }
+    .sec-link { font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: .35rem; min-height: 44px; color: var(--ak-dark); border-bottom: 2px solid var(--ak-pink); padding-bottom: 2px; min-height: 0; }
+    .sec-link:hover { color: var(--ak-pink); }
+
+    .ak-wave { display: block; width: 100%; height: 40px; line-height: 0; }
+    .ak-wave svg { width: 100%; height: 100%; display: block; }
+    @media (min-width: 768px) { .ak-wave { height: 60px; } }
+
+    /* =========================================================
+       9. CATEGORY CARDS (photo)
+       ========================================================= */
+    .cat-card { position: relative; display: block; height: 100%; aspect-ratio: 3 / 4; border-radius: var(--ak-radius-lg); overflow: hidden; text-decoration: none; isolation: isolate; box-shadow: var(--ak-shadow); transition: transform .45s var(--ak-ease), box-shadow .45s var(--ak-ease); background: var(--ak-photo-bg); }
+    .cat-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; transition: transform 1s var(--ak-ease); }
+    .cat-card::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(to top, var(--c) 0%, var(--c) 16%, rgba(0,0,0,0) 62%); transition: opacity .4s; }
+    .cat-card .meta { position: absolute; left: 0; right: 0; bottom: 0; padding: 1rem; color: var(--fg); }
+    .cat-card .lbl { display: block; font-family: var(--ak-font-head); font-weight: 600; font-size: clamp(1.05rem, 4vw, 1.35rem); line-height: 1.15; }
+    .cat-card .go { display: inline-flex; align-items: center; gap: .3rem; margin-top: .4rem; font-size: .78rem; font-weight: 600; opacity: .9; }
+    .cat-card .go .bi { transition: transform .3s var(--ak-ease); }
+    .cat-card .tag { position: absolute; top: .8rem; left: .8rem; background: rgba(255,255,255,.92); color: var(--ak-dark); border-radius: 999px; padding: .25rem .65rem; font-size: .7rem; font-weight: 600; backdrop-filter: blur(6px); }
+    .cat-card:hover { transform: translateY(-8px); box-shadow: var(--ak-shadow-lg); }
+    .cat-card:hover img { transform: scale(1.08); }
+    .cat-card:hover .go .bi { transform: translateX(4px); }
+    .cat-card:hover .lbl { animation: bounceY .6s ease; }
+    @keyframes bounceY { 30% { transform: translateY(-6px); } 55% { transform: translateY(0); } 75% { transform: translateY(-2px); } }
+    .cat-pink   { --c: rgba(255,31,142,.94); --fg: #fff; }
+    .cat-cyan   { --c: rgba(0,189,242,.95);  --fg: var(--ak-dark); }
+    .cat-yellow { --c: rgba(255,242,0,.96);  --fg: var(--ak-dark); }
+    .cat-plum   { --c: rgba(176,40,122,.95); --fg: #fff; }
+
+    /* =========================================================
+       10. SHOP BY AGE
+       ========================================================= */
+    .age-chip { position: relative; overflow: hidden; display: flex; align-items: center; gap: .75rem; min-height: 72px; padding: .7rem 1rem; border-radius: var(--ak-radius); background: #fff; border: 1px solid var(--ak-line); color: var(--ak-dark); text-decoration: none; box-shadow: var(--ak-shadow); transition: transform .35s var(--ak-ease), box-shadow .35s var(--ak-ease), color .3s; isolation: isolate; }
+    .age-chip::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--c); transform: translateY(101%); transition: transform .45s var(--ak-ease); }
+    .age-chip:hover { transform: translateY(-4px); color: var(--fg); box-shadow: var(--ak-shadow-lg); }
+    .age-chip:hover::before { transform: none; }
+    .age-chip .ic { width: 44px; height: 44px; flex: none; border-radius: 14px; display: grid; place-items: center; background: var(--c); color: var(--fg); font-size: 1.2rem; transition: background-color .3s, color .3s; }
+    .age-chip:hover .ic { background: rgba(255,255,255,.95); color: var(--ak-dark); }
+    .age-chip .a { font-family: var(--ak-font-head); font-weight: 600; font-size: 1.12rem; line-height: 1.1; }
+    .age-chip small { display: block; font-size: .72rem; opacity: .75; }
+
+    /* =========================================================
+       11. PRODUCT CARD
+       ========================================================= */
+    .p-card { position: relative; display: flex; flex-direction: column; height: 100%; background: #fff; border-radius: var(--ak-radius); border: 1px solid var(--ak-line); overflow: hidden; transition: transform .45s var(--ak-ease), box-shadow .45s var(--ak-ease), border-color .3s; }
+    .p-card:hover { transform: translateY(-6px); box-shadow: var(--ak-shadow-lg); border-color: transparent; }
+    .p-media { position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: var(--ak-photo-bg); }
+    .p-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .9s var(--ak-ease); }
+    .p-card:hover .p-media img { transform: scale(1.08); }
+    .p-media .fallback { position: absolute; inset: 0; display: none; place-items: center; font-size: 2.6rem; color: var(--cat); background: var(--ak-soft); }
+    .p-media.img-failed .fallback, .cart-thumb.img-failed .fallback, .insta-tile.img-failed .fallback { display: grid; }
+    .p-sticker { position: absolute; top: 10px; left: 10px; z-index: 2; background: var(--ak-yellow); color: var(--ak-dark); border-radius: 999px; padding: .28rem .65rem; font-weight: 700; font-size: .66rem; letter-spacing: .1em; box-shadow: 0 6px 14px -6px rgba(17,17,17,.4); }
+    .p-sticker.sale { background: var(--ak-dark); color: var(--ak-yellow); }
+    .p-wish { position: absolute; top: 8px; right: 8px; z-index: 3; width: 40px; height: 40px; border-radius: 50%; border: 0; background: rgba(255,255,255,.88); backdrop-filter: blur(8px); color: var(--ak-dark); display: grid; place-items: center; font-size: 1.05rem; box-shadow: 0 6px 16px -6px rgba(17,17,17,.35); transition: transform .25s var(--ak-ease), color .2s; }
+    .p-wish:hover { transform: scale(1.1); color: var(--ak-pink); }
+    .p-wish.active { color: var(--ak-pink); animation: btnBounce .45s ease; }
+    .p-quick { position: absolute; left: 10px; right: 10px; bottom: 10px; z-index: 3; opacity: 0; transform: translateY(12px); transition: opacity .35s var(--ak-ease), transform .35s var(--ak-ease); }
+    @media (hover: hover) and (min-width: 992px) { .p-card:hover .p-quick { opacity: 1; transform: none; } }
+    .p-body { display: flex; flex-direction: column; gap: .3rem; flex: 1; padding: .85rem .85rem 1rem; }
+    .p-cat { display: inline-flex; align-items: center; gap: .35rem; font-size: .66rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--ak-muted); }
+    .p-cat::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--cat); }
+    .p-name { font-family: var(--ak-font-body); font-weight: 600; font-size: .95rem; line-height: 1.3; margin: 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 2.6em; }
+    .p-name a { color: var(--ak-dark); text-decoration: none; }
+    .p-name a::after { content: ""; position: absolute; inset: 0; z-index: 1; }
+    .p-rating { display: flex; align-items: center; gap: .1rem; font-size: .72rem; color: var(--ak-pink); }
+    .p-rating span { color: var(--ak-muted); font-weight: 500; margin-left: .3rem; }
+    .p-price-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: .15rem .45rem; margin-top: auto; padding-top: .3rem; }
+    .p-price { color: var(--ak-pink); font-family: var(--ak-font-head); font-weight: 600; font-size: 1.3rem; line-height: 1; }
+    .p-mrp { color: var(--ak-muted); text-decoration: line-through; font-size: .8rem; }
+    .p-off { color: var(--ak-green-text); font-weight: 600; font-size: .76rem; }
+    .p-card .p-body .btn-ak { position: relative; z-index: 2; width: 100%; margin-top: .6rem; }
+    @media (hover: hover) and (min-width: 992px) { .p-card .p-body .btn-ak { display: none; } }
+    @media (max-width: 380px) {
+      .p-body { padding: .7rem .65rem .85rem; }
+      .p-card .btn-ak { font-size: .84rem; padding: .45rem .5rem; }
+      .p-price { font-size: 1.15rem; }
+    }
+
+    /* =========================================================
+       12. OFFER BANNER
+       ========================================================= */
+    .ak-offer { position: relative; overflow: hidden; border-radius: var(--ak-radius-xl); padding: 2.25rem 1.25rem; color: #fff; background: linear-gradient(125deg, var(--ak-pink) 0%, #D8238A 45%, var(--ak-plum) 100%); box-shadow: 0 30px 60px -24px rgba(176,40,122,.6); isolation: isolate; }
+    .ak-offer::before { content: ""; position: absolute; z-index: -1; width: 420px; height: 420px; right: -140px; top: -160px; border-radius: 50%; background: radial-gradient(circle, rgba(255,255,255,.22), transparent 65%); }
+    .ak-offer::after { content: ""; position: absolute; z-index: -1; inset: 0; opacity: .35; background-image: radial-gradient(rgba(255,255,255,.18) 1px, transparent 1px); background-size: 18px 18px; -webkit-mask-image: linear-gradient(90deg, transparent, #000); mask-image: linear-gradient(90deg, transparent, #000); }
+    .offer-tag { display: inline-flex; align-items: center; gap: .4rem; background: rgba(17,17,17,.35); color: var(--ak-yellow); padding: .35rem .9rem; border-radius: 999px; font-weight: 600; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; border: 1px solid rgba(255,255,255,.15); }
+    .ak-offer h2 { font-size: clamp(1.8rem, 6.5vw, 2.9rem); line-height: 1.08; margin: 1rem 0 .6rem; }
+    .ak-offer .save { display: inline-block; background: var(--ak-yellow); color: var(--ak-dark); padding: 0 .3em; border-radius: 12px; }
+    .ak-offer p { color: rgba(255,255,255,.85); }
+    .cd { display: flex; gap: .5rem; margin: 1.4rem 0 1.6rem; }
+    .cd-box { flex: 1 1 0; max-width: 86px; text-align: center; padding: .65rem .25rem; border-radius: 18px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.22); backdrop-filter: blur(10px); }
+    .cd-num { display: block; font-family: var(--ak-font-head); font-weight: 600; font-size: clamp(1.45rem, 6vw, 2rem); line-height: 1; font-variant-numeric: tabular-nums; }
+    .cd-num.flip { animation: flip .4s var(--ak-ease); }
+    @keyframes flip { from { transform: translateY(-40%); opacity: .2; } to { transform: none; opacity: 1; } }
+    .cd-lbl { display: block; font-size: .64rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; opacity: .85; margin-top: .3rem; }
+    .offer-photos { position: relative; height: 290px; max-width: 360px; margin: 2rem auto 0; }
+    .offer-photos .op { position: absolute; border-radius: 24px; overflow: hidden; border: 5px solid #fff; box-shadow: 0 24px 50px -20px rgba(0,0,0,.55); background: var(--ak-photo-bg); }
+    .offer-photos .op img { width: 100%; height: 100%; object-fit: cover; }
+    .offer-photos .op1 { width: 58%; height: 78%; left: 2%; top: 0; transform: rotate(-6deg); }
+    .offer-photos .op2 { width: 56%; height: 70%; right: 2%; bottom: 0; transform: rotate(5deg); }
+    .offer-photos .plus { position: absolute; z-index: 2; left: 50%; top: 46%; translate: -50% -50%; width: 52px; height: 52px; border-radius: 50%; background: var(--ak-yellow); color: var(--ak-dark); display: grid; place-items: center; font-size: 1.6rem; font-weight: 700; box-shadow: 0 10px 24px -8px rgba(0,0,0,.5); }
+    @media (min-width: 992px) { .ak-offer { padding: 3.5rem; } .offer-photos { margin-top: 0; height: 340px; } }
+
+    /* =========================================================
+       13. WHY PARENTS LOVE US
+       ========================================================= */
+    .why-item { height: 100%; text-align: center; padding: 1.6rem .9rem; background: #fff; border-radius: var(--ak-radius-lg); box-shadow: var(--ak-shadow); transition: transform .4s var(--ak-ease), box-shadow .4s var(--ak-ease); }
+    .why-item:hover { transform: translateY(-6px); box-shadow: var(--ak-shadow-lg); }
+    .why-ic { width: 64px; height: 64px; margin: 0 auto 1rem; border-radius: 20px; display: grid; place-items: center; font-size: 1.6rem; background: var(--bg); color: var(--fg); transition: transform .5s var(--ak-ease); }
+    .why-item:hover .why-ic { transform: rotate(-8deg) scale(1.08); }
+    .why-item h3 { font-size: 1.05rem; margin: 0 0 .35rem; }
+    .why-item p { font-size: .84rem; color: var(--ak-muted); margin: 0; line-height: 1.55; }
+
+    /* =========================================================
+       14. BESTSELLER CAROUSEL
+       ========================================================= */
+    .ak-scroller { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-left: 2px; padding: .5rem 2px 1.5rem; scrollbar-width: none; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+    .ak-scroller::-webkit-scrollbar { display: none; }
+    .ak-scroller > .slide { flex: 0 0 68%; scroll-snap-align: start; }
+    @media (min-width: 576px) { .ak-scroller > .slide { flex-basis: 44%; } }
+    @media (min-width: 768px) { .ak-scroller > .slide { flex-basis: calc((100% - 2rem) / 3); } }
+    @media (min-width: 1200px) { .ak-scroller > .slide { flex-basis: calc((100% - 3rem) / 4); } }
+    .scroll-btn { width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid var(--ak-line); background: #fff; color: var(--ak-dark); display: inline-grid; place-items: center; font-size: 1.1rem; box-shadow: var(--ak-shadow); transition: background-color .2s, color .2s, transform .2s; }
+    .scroll-btn:hover { background: var(--ak-dark); color: #fff; transform: scale(1.06); }
+    .scroll-btn:disabled { opacity: .35; pointer-events: none; }
+    .scroll-progress { height: 4px; border-radius: 4px; background: var(--ak-line); overflow: hidden; max-width: 220px; margin: 0 auto; }
+    .scroll-progress span { display: block; height: 100%; width: 25%; border-radius: 4px; background: linear-gradient(90deg, var(--ak-pink), var(--ak-plum)); transition: width .15s; }
+
+    /* =========================================================
+       15. INSTAGRAM
+       ========================================================= */
+    .insta-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .5rem; }
+    @media (min-width: 768px) { .insta-grid { grid-template-columns: repeat(6, 1fr); gap: .85rem; } }
+    .insta-tile { position: relative; display: block; aspect-ratio: 1 / 1; border-radius: 18px; overflow: hidden; background: var(--ak-photo-bg); }
+    .insta-tile img { width: 100%; height: 100%; object-fit: cover; transition: transform .9s var(--ak-ease); }
+    .insta-tile .fallback { position: absolute; inset: 0; display: none; place-items: center; font-size: 2rem; color: var(--ak-plum); }
+    .insta-tile .ov { position: absolute; inset: 0; display: grid; place-items: center; background: linear-gradient(135deg, rgba(255,31,142,.85), rgba(176,40,122,.85)); color: #fff; font-size: 1.7rem; opacity: 0; transition: opacity .35s; }
+    .insta-tile:hover .ov, .insta-tile:focus-visible .ov { opacity: 1; }
+    .insta-tile:hover img { transform: scale(1.1); }
+    .insta-handle { font-family: var(--ak-font-head); color: var(--ak-plum); font-weight: 600; }
+
+    /* =========================================================
+       16. REVIEWS
+       ========================================================= */
+    .review-card { position: relative; height: 100%; padding: 1.75rem 1.4rem; background: #fff; border-radius: var(--ak-radius-lg); border: 1px solid var(--ak-line); transition: transform .4s var(--ak-ease), box-shadow .4s var(--ak-ease); }
+    .review-card:hover { transform: translateY(-6px); box-shadow: var(--ak-shadow-lg); }
+    .review-card .qmark { position: absolute; top: .3rem; right: 1.2rem; font-family: Georgia, serif; font-size: 5rem; line-height: 1; color: var(--ak-soft); }
+    .review-card .stars { color: var(--ak-pink); font-size: .9rem; letter-spacing: 1px; }
+    .review-card p { margin: .85rem 0 1.25rem; line-height: 1.7; }
+    .rv-person { display: flex; align-items: center; gap: .75rem; padding-top: 1rem; border-top: 1px solid var(--ak-line); }
+    .rv-avatar { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; font-family: var(--ak-font-head); font-weight: 600; font-size: 1.05rem; background: var(--bg); color: var(--fg); flex: none; }
+    .rv-name { font-weight: 600; line-height: 1.2; }
+    .rv-meta { font-size: .78rem; color: var(--ak-muted); }
+    .verified { color: var(--ak-green-text); font-size: .72rem; font-weight: 600; }
+    .sample-tag { display: inline-block; font-size: .64rem; font-weight: 600; color: var(--ak-plum); border: 1px dashed var(--ak-plum); border-radius: 999px; padding: .1rem .5rem; text-transform: uppercase; letter-spacing: .06em; }
+
+    /* =========================================================
+       17. SIGNUP
+       ========================================================= */
+    .signup-box { position: relative; overflow: hidden; padding: 2.25rem 1.25rem; border-radius: var(--ak-radius-xl); color: #fff; isolation: isolate;
+      background: radial-gradient(420px circle at 100% 0%, rgba(255,31,142,.45), transparent 60%), radial-gradient(360px circle at 0% 100%, rgba(0,189,242,.3), transparent 60%), var(--ak-dark); box-shadow: 0 30px 60px -28px rgba(17,17,17,.6); }
+    .signup-box .sec-kicker { background: rgba(255,255,255,.1); color: var(--ak-yellow); }
+    .signup-box .sec-sub { color: rgba(255,255,255,.72); }
+    .signup-box .form-control { min-height: 54px; border-radius: 999px; border: 1px solid rgba(255,255,255,.2); background: rgba(255,255,255,.08); color: #fff; padding-left: 1.25rem; }
+    .signup-box .form-control::placeholder { color: rgba(255,255,255,.55); }
+    .signup-box .form-control:focus { border-color: var(--ak-pink); box-shadow: 0 0 0 4px rgba(255,31,142,.25); background: rgba(255,255,255,.12); }
+    .signup-box .btn-ak { min-height: 54px; }
+    .signup-msg { font-weight: 600; font-size: .9rem; min-height: 1.4em; }
+    .signup-msg.ok { color: #5BE38A; }
+    .signup-msg.err { color: #FF8FC4; }
+    .signup-perks { display: flex; flex-wrap: wrap; gap: .4rem 1rem; margin-top: 1rem; font-size: .8rem; color: rgba(255,255,255,.75); list-style: none; padding: 0; }
+    .signup-perks .bi { color: var(--ak-green); }
+    @media (min-width: 768px) { .signup-box { padding: 3.25rem; } }
+
+    /* =========================================================
+       18. FOOTER
+       ========================================================= */
+    .ak-footer { background: var(--ak-dark); color: rgba(255,255,255,.72); padding: 3rem 0 6.5rem; font-size: .9rem; }
+    .ak-footer h3 { color: #fff; font-size: 1.05rem; margin-bottom: 1rem; position: relative; padding-bottom: .55rem; }
+    .ak-footer h3::after { content: ""; position: absolute; left: 0; bottom: 0; width: 32px; height: 3px; border-radius: 3px; background: var(--ak-plum); }
+    .ak-footer ul { list-style: none; padding: 0; margin: 0; }
+    .ak-footer li a, .ak-footer .f-contact a { color: rgba(255,255,255,.75); text-decoration: none; display: inline-flex; align-items: center; gap: .5rem; min-height: 40px; transition: color .2s, transform .2s; }
+    .ak-footer li a:hover { color: var(--ak-pink); transform: translateX(3px); }
+    .ak-footer .f-contact a:hover { color: var(--ak-pink); }
+    .ak-footer .f-contact i { color: var(--ak-cyan); }
+    .social a { width: 44px; height: 44px; border-radius: 50%; display: inline-grid; place-items: center; background: rgba(255,255,255,.07); color: #fff; font-size: 1.1rem; text-decoration: none; transition: background-color .25s, transform .25s; }
+    .social a:hover { background: var(--ak-pink); color: #fff; transform: translateY(-3px); }
+    .pay-chip { display: inline-flex; align-items: center; gap: .3rem; background: rgba(255,255,255,.95); color: var(--ak-dark); border-radius: 8px; font-weight: 600; font-size: .72rem; padding: .35rem .6rem; }
+    .f-bottom { border-top: 1px solid rgba(255,255,255,.1); margin-top: 2.25rem; padding-top: 1.25rem; font-size: .82rem; }
+    .f-toggle { background: none; border: 0; color: #fff; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 0; text-align: left; font: inherit; }
+    .f-toggle .bi { transition: transform .25s; }
+    .f-toggle[aria-expanded="true"] .bi { transform: rotate(180deg); }
+    @media (min-width: 768px) {
+      .f-toggle { pointer-events: none; }
+      .f-toggle .bi { display: none; }
+      .ak-footer .collapse { display: block !important; height: auto !important; }
+    }
+
+    /* =========================================================
+       19. FLOATING BUTTONS + TOAST
+       ========================================================= */
+    .wa-float { position: fixed; z-index: 1045; right: max(16px, env(safe-area-inset-right)); bottom: calc(16px + env(safe-area-inset-bottom)); display: inline-flex; align-items: center; gap: .5rem; height: 60px; min-width: 60px; padding: 0 1rem; justify-content: center; border-radius: 999px; background: var(--ak-green); color: #fff; font-size: 1.8rem; text-decoration: none; box-shadow: 0 14px 30px -8px rgba(11,166,60,.6); transition: transform .3s var(--ak-ease); }
+    .wa-float:hover { color: #fff; transform: scale(1.06); }
+    .wa-float::before { content: ""; position: absolute; inset: 0; border-radius: inherit; border: 2px solid var(--ak-green); animation: pulse 2.2s ease-out infinite; }
+    .wa-float .wa-label { display: none; font-weight: 600; font-size: .95rem; }
+    @media (min-width: 992px) { .wa-float .wa-label { display: inline; } .wa-float { padding: 0 1.25rem 0 1rem; } }
+    @keyframes pulse { 0% { transform: scale(1); opacity: .8; } 100% { transform: scale(1.35); opacity: 0; } }
+
+    .to-top { position: fixed; z-index: 1044; right: max(16px, env(safe-area-inset-right)); bottom: calc(88px + env(safe-area-inset-bottom)); width: 46px; height: 46px; border-radius: 50%; border: 0; background: #fff; color: var(--ak-dark); box-shadow: var(--ak-shadow-lg); display: grid; place-items: center; font-size: 1.15rem; opacity: 0; transform: translateY(16px) scale(.9); pointer-events: none; transition: opacity .35s var(--ak-ease), transform .35s var(--ak-ease); }
+    .to-top.show { opacity: 1; transform: none; pointer-events: auto; }
+    .to-top:hover { background: var(--ak-pink); color: #fff; }
+
+    .toast-wrap { position: fixed; z-index: 1090; left: 50%; transform: translateX(-50%); bottom: calc(88px + env(safe-area-inset-bottom)); width: min(360px, calc(100% - 32px)); }
+    .ak-toast { border: 0; border-radius: 18px; background: var(--ak-dark); color: #fff; box-shadow: 0 18px 40px -12px rgba(0,0,0,.45); }
+    .ak-toast .toast-body { display: flex; align-items: center; gap: .75rem; padding: .85rem 1rem; font-weight: 500; }
+    .ak-toast .tick { width: 32px; height: 32px; flex: none; border-radius: 50%; background: var(--ak-green); display: grid; place-items: center; }
+
+    /* =========================================================
+       20. MOTION SAFETY
+       ========================================================= */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+      .js [data-reveal] { opacity: 1 !important; transform: none !important; clip-path: none !important; }
+      .js [data-reveal] .u { background-size: 100% 36% !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress-bar" id="scrollBar" aria-hidden="true"></div>
+
+  <!-- Small decorative shapes -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-star" viewBox="0 0 100 100"><path d="M50 2 C54 34 66 46 98 50 C66 54 54 66 50 98 C46 66 34 54 2 50 C34 46 46 34 50 2 Z" fill="currentColor"/></symbol>
+      <symbol id="i-squiggle" viewBox="0 0 64 22"><path d="M3 11 C10 2 16 2 22 11 S34 20 42 11 S54 2 61 11" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- =========================================================
+       1. ANNOUNCEMENT BAR
+       ========================================================= -->
+  <div class="ak-announce" role="region" aria-label="Store offers">
+    <div class="container inner">
+      <span class="msg active"><i class="bi bi-truck" aria-hidden="true"></i> Free delivery above ₹999</span>
+      <span class="sep" aria-hidden="true">|</span>
+      <span class="msg"><i class="bi bi-cash-coin" aria-hidden="true"></i> Cash on Delivery available</span>
+      <span class="sep" aria-hidden="true">|</span>
+      <span class="msg"><i class="bi bi-whatsapp" aria-hidden="true"></i> <a href="https://wa.me/919999999999" data-wa="Hi AMIGO Kid! I'd like to place an order." target="_blank" rel="noopener">Order on WhatsApp</a></span>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       2. STICKY HEADER
+       ========================================================= -->
+  <header class="ak-header sticky-top" id="siteHeader">
+    <div class="container">
+      <div class="bar">
+        <button class="ak-icon-btn d-lg-none ms-n2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Open menu">
+          <i class="bi bi-list" style="font-size:1.6rem"></i>
+        </button>
+
+        <!-- LOGO: to use your image logo, replace the spans with:
+             <img src="assets/amigo-kid-logo.png" alt="AMIGO Kid" width="160" height="44"> -->
+        <a class="ak-logo me-auto me-lg-4" href="/" aria-label="AMIGO Kid home">
+          <span aria-hidden="true"><span class="l l1">A</span><span class="l l2">M</span><span class="l l3">I</span><span class="l l4">G</span><span class="l l5">O</span></span>
+          <span class="kid" aria-hidden="true">Kid</span>
+        </a>
+
+        <nav class="ak-nav d-none d-lg-block me-auto" aria-label="Main">
+          <ul class="nav">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/collections/shoes">Shoes</a></li>
+            <li class="nav-item"><a class="nav-link" href="/collections/bags">Bags</a></li>
+            <li class="nav-item"><a class="nav-link" href="/collections/sunglasses">Sunglasses</a></li>
+            <li class="nav-item"><a class="nav-link" href="/collections/accessories">Accessories</a></li>
+            <li class="nav-item"><a class="nav-link" href="#new-arrivals">New Arrivals</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="d-flex align-items-center gap-1 me-n2">
+          <button class="ak-icon-btn" type="button" data-bs-toggle="collapse" data-bs-target="#searchBar" aria-expanded="false" aria-controls="searchBar" aria-label="Search">
+            <i class="bi bi-search"></i>
+          </button>
+          <a class="ak-icon-btn" href="#new-arrivals" aria-label="Wishlist">
+            <i class="bi bi-heart"></i><span class="ak-count" id="wishCount" data-zero="true">0</span>
+          </a>
+          <button class="ak-icon-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartPanel" aria-controls="cartPanel" aria-label="Cart">
+            <i class="bi bi-bag"></i><span class="ak-count" id="cartCount" data-zero="true">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search (Shopify: /search?q= ; WooCommerce: action="/" name="s") -->
+    <div class="collapse ak-search" id="searchBar">
+      <div class="container py-3">
+        <form action="/search" method="get" role="search" class="d-flex gap-2">
+          <label for="q" class="visually-hidden">Search products</label>
+          <input id="q" name="q" type="search" class="form-control" placeholder="Search shoes, bags, sunglasses…" autocomplete="off">
+          <button class="btn-ak btn-ak-pink flex-none" type="submit" aria-label="Search"><i class="bi bi-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="offcanvas offcanvas-start ak-offcanvas" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header">
+      <a class="ak-logo" href="/" id="mobileMenuLabel" aria-label="AMIGO Kid home">
+        <span aria-hidden="true"><span class="l l1">A</span><span class="l l2">M</span><span class="l l3">I</span><span class="l l4">G</span><span class="l l5">O</span></span><span class="kid" aria-hidden="true">Kid</span>
+      </a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close menu"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <nav class="ak-mnav" aria-label="Mobile">
+        <a href="/"><span class="dot" style="background:#fff"></span>Home</a>
+        <a href="/collections/shoes"><span class="dot" style="background:var(--ak-pink)"></span>Shoes</a>
+        <a href="/collections/bags"><span class="dot" style="background:var(--ak-cyan)"></span>Bags</a>
+        <a href="/collections/sunglasses"><span class="dot" style="background:var(--ak-yellow)"></span>Sunglasses</a>
+        <a href="/collections/accessories"><span class="dot" style="background:var(--ak-plum)"></span>Accessories</a>
+        <a href="#new-arrivals" data-bs-dismiss="offcanvas"><span class="dot" style="background:var(--ak-green)"></span>New Arrivals</a>
+        <a href="#contact" data-bs-dismiss="offcanvas"><span class="dot" style="background:#888"></span>Contact</a>
+      </nav>
+      <div class="mt-auto pt-4">
+        <a class="btn-ak btn-ak-green w-100" href="https://wa.me/919999999999" data-wa="Hi AMIGO Kid! I'd like to place an order." target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Order on WhatsApp</a>
+        <p class="small mt-3 mb-0 text-white-50 text-center">Free delivery above ₹999 · COD available</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart panel -->
+  <div class="offcanvas offcanvas-end ak-cart" tabindex="-1" id="cartPanel" aria-labelledby="cartPanelLabel">
+    <div class="offcanvas-header border-bottom">
+      <h2 class="offcanvas-title h5 mb-0" id="cartPanelLabel">Your Cart</h2>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close cart"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div id="cartItems" class="flex-grow-1"></div>
+      <div id="cartFooter" class="pt-3">
+        <div class="d-flex justify-content-between fw-semibold mb-1"><span>Subtotal</span><span id="cartTotal">₹0</span></div>
+        <p class="small mb-3" id="cartShipNote" style="color:var(--ak-green-text)"></p>
+        <a class="btn-ak btn-ak-green w-100 mb-2" id="cartWa" href="https://wa.me/919999999999" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Order on WhatsApp</a>
+        <a class="btn-ak btn-ak-pink w-100" href="/checkout"><i class="bi bi-lock"></i> Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- =========================================================
+         3. HERO
+         ========================================================= -->
+    <section class="ak-hero" aria-labelledby="heroTitle">
+      <span class="spark s1" aria-hidden="true" data-parallax="0.25"><svg><use href="#i-star"/></svg></span>
+      <span class="spark s2" aria-hidden="true" data-parallax="0.4"><svg><use href="#i-star"/></svg></span>
+      <span class="spark s3" aria-hidden="true" data-parallax="0.15"></span>
+      <span class="spark s4" aria-hidden="true" data-parallax="0.3"><svg><use href="#i-squiggle"/></svg></span>
+      <span class="spark s5" aria-hidden="true" data-parallax="0.35"></span>
+
+      <div class="container position-relative" style="z-index:2">
+        <div class="row align-items-center g-lg-5">
+          <div class="col-lg-6 text-center text-lg-start">
+            <span class="ak-eyebrow" data-reveal="down"><b>NEW</b> Back-to-school collection is here</span>
+            <h1 id="heroTitle" data-reveal="up" style="--d:.1s">Little Feet, <span class="grad-text">Big Style!</span></h1>
+            <p class="lead mx-auto mx-lg-0" data-reveal="up" style="--d:.2s">Comfy shoes, cool shades and school-ready bags for your little amigo.</p>
+            <div class="cta justify-content-center justify-content-lg-start" data-reveal="up" style="--d:.3s">
+              <a class="btn-ak btn-ak-pink" href="#new-arrivals">Shop Now <i class="bi bi-arrow-right"></i></a>
+              <a class="btn-ak btn-ak-green" href="https://wa.me/919999999999" data-wa="Hi AMIGO Kid! I'd like to place an order." target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Order on WhatsApp</a>
+            </div>
+            <div class="hero-proof justify-content-center justify-content-lg-start" data-reveal="up" style="--d:.4s">
+              <div class="avatars" aria-hidden="true">
+                <img src="https://images.unsplash.com/photo-1513091250092-b06c2b7981bc?auto=format&fit=crop&w=80&h=80&q=60" alt="" width="38" height="38">
+                <img src="https://images.unsplash.com/photo-1678192568478-9488ee55def6?auto=format&fit=crop&w=80&h=80&q=60" alt="" width="38" height="38">
+                <img src="https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=crop&w=80&h=80&q=60" alt="" width="38" height="38">
+              </div>
+              <div class="text-start">
+                <span class="stars" aria-label="Rated 5 stars">★★★★★</span>
+                <small>Loved by parents across Kerala</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <!-- TODO: replace with your own hero photo (kid wearing your products) -->
+            <div class="hero-visual">
+              <div class="hero-frame" data-reveal="clip" style="--d:.15s">
+                <div class="ph">
+                  <img src="https://images.unsplash.com/photo-1542422784-cd6a92a7e4b3?auto=format&fit=crop&w=720&h=900&q=75"
+                       srcset="https://images.unsplash.com/photo-1542422784-cd6a92a7e4b3?auto=format&fit=crop&w=480&h=600&q=75 480w,
+                               https://images.unsplash.com/photo-1542422784-cd6a92a7e4b3?auto=format&fit=crop&w=720&h=900&q=75 720w,
+                               https://images.unsplash.com/photo-1542422784-cd6a92a7e4b3?auto=format&fit=crop&w=960&h=1200&q=75 960w"
+                       sizes="(min-width: 992px) 470px, 90vw"
+                       alt="Happy toddler walking with a blue school backpack" width="720" height="900" fetchpriority="high" decoding="async">
+                </div>
+              </div>
+
+              <div class="glass-card gc-1" data-parallax="-0.08" aria-hidden="true">
+                <div class="float d-flex align-items-center gap-2">
+                  <img src="https://images.unsplash.com/photo-1678192569393-c7aff066e5bd?auto=format&fit=crop&w=100&h=100&q=60" alt="" width="46" height="46">
+                  <div><div class="t">Velcro Sneakers</div><div class="p">₹799</div></div>
+                </div>
+              </div>
+              <div class="glass-card gc-2" data-parallax="-0.14" aria-hidden="true">
+                <div class="float f2 d-flex align-items-center gap-2">
+                  <img src="https://images.unsplash.com/photo-1577803645773-f96470509666?auto=format&fit=crop&w=100&h=100&q=60" alt="" width="46" height="46">
+                  <div><div class="t">UV400 Shades</div><div class="p">₹349 <i class="bi bi-lightning-charge-fill"></i></div></div>
+                </div>
+              </div>
+              <div class="glass-card gc-3 float f3" aria-hidden="true"><i class="bi bi-patch-check-fill"></i> Kid-safe &amp; comfy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits marquee -->
+    <div class="ak-marquee" aria-label="Store benefits">
+      <div class="track">
+        <!-- items duplicated for a seamless loop -->
+        <span class="item"><svg><use href="#i-star"/></svg>Free delivery above ₹999</span>
+        <span class="item"><svg><use href="#i-star"/></svg>Cash on Delivery</span>
+        <span class="item"><svg><use href="#i-star"/></svg>Easy size exchange</span>
+        <span class="item"><svg><use href="#i-star"/></svg>Kid-safe materials</span>
+        <span class="item"><svg><use href="#i-star"/></svg>Ships across India</span>
+        <span class="item"><svg><use href="#i-star"/></svg>Order on WhatsApp</span>
+        <span class="item" aria-hidden="true"><svg><use href="#i-star"/></svg>Free delivery above ₹999</span>
+        <span class="item" aria-hidden="true"><svg><use href="#i-star"/></svg>Cash on Delivery</span>
+        <span class="item" aria-hidden="true"><svg><use href="#i-star"/></svg>Easy size exchange</span>
+        <span class="item" aria-hidden="true"><svg><use href="#i-star"/></svg>Kid-safe materials</span>
+        <span class="item" aria-hidden="true"><svg><use href="#i-star"/></svg>Ships across India</span>
+        <span class="item" aria-hidden="true"><svg><use href="#i-star"/></svg>Order on WhatsApp</span>
+      </div>
+    </div>
+
+    <!-- =========================================================
+         4. SHOP BY CATEGORY
+         ========================================================= -->
+    <section class="ak-section" aria-labelledby="catTitle">
+      <div class="container">
+        <div class="sec-head text-center">
+          <span class="sec-kicker" data-reveal="up"><i class="bi bi-grid"></i> Pick a favourite</span>
+          <h2 class="sec-title" id="catTitle" data-reveal="up" style="--d:.08s">Shop by <span class="u">Category</span></h2>
+        </div>
+        <div class="row row-cols-2 row-cols-md-4 g-3" data-stagger>
+          <div class="col" data-reveal="up">
+            <a class="cat-card cat-pink" href="/collections/shoes">
+              <img src="https://images.unsplash.com/photo-1678192568478-9488ee55def6?auto=format&fit=crop&w=600&h=800&q=70" alt="Kids' shoes" width="600" height="800" loading="lazy" decoding="async">
+              <span class="tag">Sneakers · Velcro</span>
+              <span class="meta"><span class="lbl">Shoes</span><span class="go">Shop now <i class="bi bi-arrow-right"></i></span></span>
+            </a>
+          </div>
+          <div class="col" data-reveal="up">
+            <a class="cat-card cat-cyan" href="/collections/bags">
+              <img src="https://images.unsplash.com/photo-1599868082389-59b00bb8760d?auto=format&fit=crop&w=600&h=800&q=70" alt="Kids' school backpack" width="600" height="800" loading="lazy" decoding="async">
+              <span class="tag">Back to school</span>
+              <span class="meta"><span class="lbl">School Bags</span><span class="go">Shop now <i class="bi bi-arrow-right"></i></span></span>
+            </a>
+          </div>
+          <div class="col" data-reveal="up">
+            <a class="cat-card cat-yellow" href="/collections/sunglasses">
+              <img src="https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=crop&w=600&h=800&q=70" alt="Kids' sunglasses" width="600" height="800" loading="lazy" decoding="async">
+              <span class="tag">UV400 protection</span>
+              <span class="meta"><span class="lbl">Sunglasses</span><span class="go">Shop now <i class="bi bi-arrow-right"></i></span></span>
+            </a>
+          </div>
+          <div class="col" data-reveal="up">
+            <a class="cat-card cat-plum" href="/collections/accessories">
+              <img src="https://images.unsplash.com/photo-1513091250092-b06c2b7981bc?auto=format&fit=crop&w=600&h=800&q=70" alt="Girls' pink bellies" width="600" height="800" loading="lazy" decoding="async">
+              <span class="tag">For little princesses</span>
+              <span class="meta"><span class="lbl">Girls' Bellies &amp; Accessories</span><span class="go">Shop now <i class="bi bi-arrow-right"></i></span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ak-wave" style="background:#fff" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,30 C300,70 520,0 760,26 C1000,52 1220,10 1440,34" fill="none" stroke="#00BDF2" stroke-width="3" opacity=".7"/>
+        <path d="M0,42 C300,82 520,12 760,38 C1000,64 1220,22 1440,46 L1440,80 L0,80 Z" fill="#FFF0F7"/>
+      </svg>
+    </div>
+
+    <!-- =========================================================
+         5. SHOP BY AGE
+         ========================================================= -->
+    <section class="ak-section ak-soft" aria-labelledby="ageTitle">
+      <div class="container">
+        <div class="sec-head text-center">
+          <span class="sec-kicker" data-reveal="up"><i class="bi bi-rulers"></i> Perfect fit, every stage</span>
+          <h2 class="sec-title" id="ageTitle" data-reveal="up" style="--d:.08s">Shop by <span class="u">Age</span></h2>
+        </div>
+        <div class="row row-cols-2 row-cols-md-4 g-3" data-stagger>
+          <div class="col" data-reveal="zoom"><a class="age-chip" href="/collections/all?age=0-2" style="--c:var(--ak-pink);--fg:#fff"><span class="ic"><i class="bi bi-balloon-heart"></i></span><span><span class="a">0–2 yrs</span><small>First steps</small></span></a></div>
+          <div class="col" data-reveal="zoom"><a class="age-chip" href="/collections/all?age=3-5" style="--c:var(--ak-cyan);--fg:var(--ak-dark)"><span class="ic"><i class="bi bi-puzzle"></i></span><span><span class="a">3–5 yrs</span><small>Play school</small></span></a></div>
+          <div class="col" data-reveal="zoom"><a class="age-chip" href="/collections/all?age=6-8" style="--c:var(--ak-green);--fg:#fff"><span class="ic"><i class="bi bi-backpack"></i></span><span><span class="a">6–8 yrs</span><small>Big school</small></span></a></div>
+          <div class="col" data-reveal="zoom"><a class="age-chip" href="/collections/all?age=9-12" style="--c:var(--ak-plum);--fg:#fff"><span class="ic"><i class="bi bi-bicycle"></i></span><span><span class="a">9–12 yrs</span><small>Tweens</small></span></a></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ak-wave" style="background:#FFF0F7" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C260,4 540,72 820,36 C1080,4 1260,58 1440,30" fill="none" stroke="#FF1F8E" stroke-width="3" opacity=".7"/>
+        <path d="M0,52 C260,16 540,84 820,48 C1080,16 1260,70 1440,42 L1440,80 L0,80 Z" fill="#FFFFFF"/>
+      </svg>
+    </div>
+
+    <!-- =========================================================
+         6. NEW ARRIVALS (rendered from PRODUCTS in the script)
+         ========================================================= -->
+    <section class="ak-section" id="new-arrivals" aria-labelledby="newTitle">
+      <div class="container">
+        <div class="sec-head d-flex flex-wrap align-items-end justify-content-between gap-3">
+          <div>
+            <span class="sec-kicker" data-reveal="up"><i class="bi bi-stars"></i> Fresh drops</span>
+            <h2 class="sec-title" id="newTitle" data-reveal="up" style="--d:.08s">New <span class="u">Arrivals</span></h2>
+          </div>
+          <a class="sec-link" href="/collections/new-arrivals" data-reveal="fade">View all <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3 g-md-4" id="newGrid" data-stagger></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         7. OFFER BANNER
+         ========================================================= -->
+    <section class="pb-5 pb-md-6" aria-labelledby="offerTitle">
+      <div class="container">
+        <div class="ak-offer" data-reveal="zoom">
+          <div class="row align-items-center">
+            <div class="col-lg-7 text-center text-lg-start">
+              <span class="offer-tag"><i class="bi bi-lightning-charge-fill"></i> Limited time</span>
+              <h2 id="offerTitle">Back to School Combo:<br>Bag + Shoes, <span class="save">Save 20%</span></h2>
+              <p class="mb-0">Pick any school bag and any pair of shoes. Discount applies automatically at checkout.</p>
+              <div class="cd justify-content-center justify-content-lg-start" id="countdown" role="timer" aria-live="off" aria-label="Offer ends in">
+                <div class="cd-box"><span class="cd-num" data-cd="d">00</span><span class="cd-lbl">Days</span></div>
+                <div class="cd-box"><span class="cd-num" data-cd="h">00</span><span class="cd-lbl">Hours</span></div>
+                <div class="cd-box"><span class="cd-num" data-cd="m">00</span><span class="cd-lbl">Mins</span></div>
+                <div class="cd-box"><span class="cd-num" data-cd="s">00</span><span class="cd-lbl">Secs</span></div>
+              </div>
+              <a class="btn-ak btn-ak-yellow" href="/collections/back-to-school" id="dealBtn">Grab the Deal <i class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="col-lg-5">
+              <div class="offer-photos" aria-hidden="true">
+                <div class="op op1" data-parallax="-0.06"><img src="https://images.unsplash.com/photo-1599868082389-59b00bb8760d?auto=format&fit=crop&w=420&h=500&q=70" alt="" loading="lazy" decoding="async"></div>
+                <div class="plus">+</div>
+                <div class="op op2" data-parallax="0.06"><img src="https://images.unsplash.com/photo-1678192568444-78b428b7cd1a?auto=format&fit=crop&w=420&h=460&q=70" alt="" loading="lazy" decoding="async"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ak-wave" style="background:#fff" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,30 C300,70 520,0 760,26 C1000,52 1220,10 1440,34" fill="none" stroke="#0BA63C" stroke-width="3" opacity=".7"/>
+        <path d="M0,42 C300,82 520,12 760,38 C1000,64 1220,22 1440,46 L1440,80 L0,80 Z" fill="#FFF0F7"/>
+      </svg>
+    </div>
+
+    <!-- =========================================================
+         8. WHY PARENTS LOVE AMIGO KID
+         ========================================================= -->
+    <section class="ak-section ak-soft" aria-labelledby="whyTitle">
+      <div class="container">
+        <div class="sec-head text-center">
+          <span class="sec-kicker" data-reveal="up"><i class="bi bi-heart"></i> Made for little ones</span>
+          <h2 class="sec-title" id="whyTitle" data-reveal="up" style="--d:.08s">Why Parents <span class="u">Love</span> AMIGO Kid</h2>
+        </div>
+        <div class="row row-cols-2 row-cols-lg-4 g-3" data-stagger>
+          <div class="col" data-reveal="up"><div class="why-item"><div class="why-ic" style="--bg:rgba(255,31,142,.12);--fg:var(--ak-pink)"><i class="bi bi-cloud"></i></div><h3>Soft &amp; Comfortable</h3><p>Cushioned soles and padded straps for all-day play.</p></div></div>
+          <div class="col" data-reveal="up"><div class="why-item"><div class="why-ic" style="--bg:rgba(0,189,242,.14);--fg:#0089B0"><i class="bi bi-shield-check"></i></div><h3>Kid-Safe Materials</h3><p>Non-toxic, skin-friendly and built to last.</p></div></div>
+          <div class="col" data-reveal="up"><div class="why-item"><div class="why-ic" style="--bg:rgba(176,40,122,.12);--fg:var(--ak-plum)"><i class="bi bi-arrow-repeat"></i></div><h3>Easy Returns</h3><p>Wrong size? Simple, quick exchanges.</p></div></div>
+          <div class="col" data-reveal="up"><div class="why-item"><div class="why-ic" style="--bg:rgba(11,166,60,.12);--fg:var(--ak-green-text)"><i class="bi bi-cash-coin"></i></div><h3>Cash on Delivery</h3><p>Pay when it reaches your doorstep.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ak-wave" style="background:#FFF0F7" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C260,4 540,72 820,36 C1080,4 1260,58 1440,30" fill="none" stroke="#B0287A" stroke-width="3" opacity=".6"/>
+        <path d="M0,52 C260,16 540,84 820,48 C1080,16 1260,70 1440,42 L1440,80 L0,80 Z" fill="#FFFFFF"/>
+      </svg>
+    </div>
+
+    <!-- =========================================================
+         9. BESTSELLERS CAROUSEL
+         ========================================================= -->
+    <section class="ak-section" aria-labelledby="bestTitle">
+      <div class="container">
+        <div class="sec-head d-flex flex-wrap align-items-end justify-content-between gap-3">
+          <div>
+            <span class="sec-kicker" data-reveal="up"><i class="bi bi-trophy"></i> Parents' top picks</span>
+            <h2 class="sec-title" id="bestTitle" data-reveal="up" style="--d:.08s"><span class="u">Bestsellers</span></h2>
+          </div>
+          <div class="d-none d-md-flex gap-2" data-reveal="fade">
+            <button class="scroll-btn" type="button" data-scroll="prev" aria-label="Previous products"><i class="bi bi-arrow-left"></i></button>
+            <button class="scroll-btn" type="button" data-scroll="next" aria-label="Next products"><i class="bi bi-arrow-right"></i></button>
+          </div>
+        </div>
+        <div class="ak-scroller" id="bestScroller" tabindex="0" aria-label="Bestseller products, swipe to see more"></div>
+        <div class="scroll-progress" aria-hidden="true"><span id="bestProgress"></span></div>
+      </div>
+    </section>
+
+    <div class="ak-wave" style="background:#fff" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,30 C300,70 520,0 760,26 C1000,52 1220,10 1440,34" fill="none" stroke="#FF1F8E" stroke-width="3" opacity=".7"/>
+        <path d="M0,42 C300,82 520,12 760,38 C1000,64 1220,22 1440,46 L1440,80 L0,80 Z" fill="#FFF0F7"/>
+      </svg>
+    </div>
+
+    <!-- =========================================================
+         10. INSTAGRAM (replace with your real post photos)
+         ========================================================= -->
+    <section class="ak-section ak-soft" aria-labelledby="instaTitle">
+      <div class="container">
+        <div class="sec-head text-center">
+          <span class="sec-kicker" data-reveal="up"><i class="bi bi-instagram"></i> On the gram</span>
+          <h2 class="sec-title" id="instaTitle" data-reveal="up" style="--d:.08s">Follow our <span class="u">little amigos</span></h2>
+          <p class="sec-sub" data-reveal="up" style="--d:.16s"><span class="insta-handle">@amigo___kid</span> · tag us to get featured!</p>
+        </div>
+        <div class="insta-grid" id="instaGrid" data-stagger></div>
+        <div class="text-center mt-4" data-reveal="up">
+          <a class="btn-ak btn-ak-pink" href="https://www.instagram.com/amigo___kid" target="_blank" rel="noopener"><i class="bi bi-instagram"></i> Follow us</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="ak-wave" style="background:#FFF0F7" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C260,4 540,72 820,36 C1080,4 1260,58 1440,30" fill="none" stroke="#00BDF2" stroke-width="3" opacity=".7"/>
+        <path d="M0,52 C260,16 540,84 820,48 C1080,16 1260,70 1440,42 L1440,80 L0,80 Z" fill="#FFFFFF"/>
+      </svg>
+    </div>
+
+    <!-- =========================================================
+         11. PARENT REVIEWS
+         ⚠️ PLACEHOLDER REVIEWS — replace with real customer reviews before launch
+            and delete the "Sample review" tags.
+         ========================================================= -->
+    <section class="ak-section" aria-labelledby="reviewTitle">
+      <div class="container">
+        <div class="sec-head text-center">
+          <span class="sec-kicker" data-reveal="up"><i class="bi bi-chat-heart"></i> Happy parents</span>
+          <h2 class="sec-title" id="reviewTitle" data-reveal="up" style="--d:.08s">What <span class="u">Mums &amp; Dads</span> Say</h2>
+        </div>
+        <div class="row g-3 g-md-4" data-stagger>
+          <div class="col-md-4" data-reveal="up">
+            <article class="review-card">
+              <span class="qmark" aria-hidden="true">“</span>
+              <span class="sample-tag">Sample review</span>
+              <div class="stars mt-2" aria-label="5 out of 5 stars">★★★★★</div>
+              <p>The velcro sneakers are so easy for my son to wear by himself. Soft, light and he refuses to take them off!</p>
+              <div class="rv-person"><span class="rv-avatar" style="--bg:rgba(255,31,142,.12);--fg:var(--ak-pink)">A</span><div><div class="rv-name">Anjali R.</div><div class="rv-meta">Kochi · Mom of a 4-year-old</div></div></div>
+            </article>
+          </div>
+          <div class="col-md-4" data-reveal="up">
+            <article class="review-card">
+              <span class="qmark" aria-hidden="true">“</span>
+              <span class="sample-tag">Sample review</span>
+              <div class="stars mt-2" aria-label="5 out of 5 stars">★★★★★</div>
+              <p>Ordered on WhatsApp, paid cash on delivery and got the school bag in 3 days. Great quality for the price.</p>
+              <div class="rv-person"><span class="rv-avatar" style="--bg:rgba(0,189,242,.14);--fg:#0089B0">F</span><div><div class="rv-name">Fathima S.</div><div class="rv-meta">Kozhikode · Mom of two</div></div></div>
+            </article>
+          </div>
+          <div class="col-md-4" data-reveal="up">
+            <article class="review-card">
+              <span class="qmark" aria-hidden="true">“</span>
+              <span class="sample-tag">Sample review</span>
+              <div class="stars mt-2" aria-label="5 out of 5 stars">★★★★★</div>
+              <p>My daughter loves her sparkly bellies and the sunglasses. Exchange for a bigger size was quick too.</p>
+              <div class="rv-person"><span class="rv-avatar" style="--bg:rgba(176,40,122,.12);--fg:var(--ak-plum)">M</span><div><div class="rv-name">Meera K.</div><div class="rv-meta">Thrissur · Mom of a 7-year-old</div></div></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         12. NEWSLETTER / WHATSAPP SIGNUP
+         ========================================================= -->
+    <section class="pb-5 pt-2" aria-labelledby="signupTitle">
+      <div class="container">
+        <div class="signup-box" data-reveal="up">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-6 text-center text-lg-start">
+              <span class="sec-kicker"><i class="bi bi-gift"></i> Join the amigo club</span>
+              <h2 class="sec-title" id="signupTitle">Get new arrivals &amp; offers first</h2>
+              <p class="sec-sub">WhatsApp or email updates. No spam, unsubscribe anytime.</p>
+            </div>
+            <div class="col-lg-6">
+              <!-- Hook this form to Shopify customer form, WooCommerce/Mailchimp or your WhatsApp API -->
+              <form id="signupForm" novalidate>
+                <label for="signupInput" class="visually-hidden">WhatsApp number or email</label>
+                <div class="d-flex flex-column flex-sm-row gap-2">
+                  <input id="signupInput" name="contact" type="text" inputmode="email" autocomplete="email" class="form-control" placeholder="WhatsApp number or email" required>
+                  <button class="btn-ak btn-ak-pink flex-shrink-0" type="submit">Subscribe <i class="bi bi-arrow-right"></i></button>
+                </div>
+                <p class="signup-msg mt-2 mb-0" id="signupMsg" role="status" aria-live="polite"></p>
+                <ul class="signup-perks justify-content-center justify-content-lg-start">
+                  <li><i class="bi bi-check-circle-fill"></i> Early access to drops</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Members-only offers</li>
+                </ul>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="ak-wave" style="background:#fff" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,40 C260,4 540,72 820,36 C1080,4 1260,58 1440,30" fill="none" stroke="#B0287A" stroke-width="3" opacity=".7"/>
+      <path d="M0,52 C260,16 540,84 820,48 C1080,16 1260,70 1440,42 L1440,80 L0,80 Z" fill="#111111"/>
+    </svg>
+  </div>
+
+  <!-- =========================================================
+       13. FOOTER
+       ========================================================= -->
+  <footer class="ak-footer" id="contact">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4" data-reveal="up">
+          <a class="ak-logo mb-3" href="/" aria-label="AMIGO Kid home">
+            <span aria-hidden="true"><span class="l l1">A</span><span class="l l2">M</span><span class="l l3">I</span><span class="l l4">G</span><span class="l l5">O</span></span><span class="kid" aria-hidden="true">Kid</span>
+          </a>
+          <p class="mb-3">Your kid's best friend in style. Comfy shoes, school bags, sunglasses and accessories for little amigos aged 1–12, from Kerala with love.</p>
+          <div class="social d-flex gap-2">
+            <a href="https://www.instagram.com/amigo___kid" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://wa.me/919999999999" data-wa="Hi AMIGO Kid!" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><!-- TODO -->
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a><!-- TODO -->
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2" data-reveal="up" style="--d:.08s">
+          <h3><button class="f-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#fQuick" aria-expanded="false" aria-controls="fQuick">Quick Links <i class="bi bi-chevron-down"></i></button></h3>
+          <ul class="collapse" id="fQuick">
+            <li><a href="/collections/shoes">Shoes</a></li>
+            <li><a href="/collections/bags">School Bags</a></li>
+            <li><a href="/collections/sunglasses">Sunglasses</a></li>
+            <li><a href="/collections/accessories">Accessories</a></li>
+            <li><a href="#new-arrivals">New Arrivals</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2" data-reveal="up" style="--d:.16s">
+          <h3><button class="f-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#fCare" aria-expanded="false" aria-controls="fCare">Customer Care <i class="bi bi-chevron-down"></i></button></h3>
+          <ul class="collapse" id="fCare">
+            <li><a href="/pages/shipping">Shipping</a></li>
+            <li><a href="/pages/returns">Returns &amp; Exchange</a></li>
+            <li><a href="/pages/size-guide">Size Guide</a></li>
+            <li><a href="/pages/faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 col-lg-4" data-reveal="up" style="--d:.24s">
+          <h3>Contact Us</h3>
+          <div class="f-contact d-flex flex-column">
+            <a href="tel:+919999999999"><i class="bi bi-telephone"></i> +91 99999 99999</a><!-- TODO -->
+            <a href="https://wa.me/919999999999" data-wa="Hi AMIGO Kid!" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Chat on WhatsApp</a>
+            <a href="mailto:hello@amigokid.in"><i class="bi bi-envelope"></i> hello@amigokid.in</a><!-- TODO -->
+            <span class="d-inline-flex gap-2 mt-2"><i class="bi bi-geo-alt" style="color:var(--ak-cyan)"></i> Shop address, City, Kerala – 682 000, India<!-- TODO --></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4" data-reveal="fade">
+        <p class="small fw-semibold text-white mb-2">We accept</p>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="pay-chip">UPI</span>
+          <span class="pay-chip">GPay</span>
+          <span class="pay-chip">PhonePe</span>
+          <span class="pay-chip">Paytm</span>
+          <span class="pay-chip"><i class="bi bi-credit-card"></i> Cards</span>
+          <span class="pay-chip"><i class="bi bi-cash"></i> COD</span>
+        </div>
+      </div>
+
+      <div class="f-bottom d-flex flex-column flex-md-row justify-content-between gap-2 text-center text-md-start">
+        <span>© <span id="year">2026</span> AMIGO Kid. All rights reserved.</span>
+        <span><a href="/pages/privacy" class="text-white-50">Privacy</a> · <a href="/pages/terms" class="text-white-50">Terms</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       14. FLOATING BUTTONS
+       ========================================================= -->
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+  <a class="wa-float" href="https://wa.me/919999999999" data-wa="Hi AMIGO Kid! I have a question." target="_blank" rel="noopener" aria-label="Chat with AMIGO Kid on WhatsApp">
+    <i class="bi bi-whatsapp" aria-hidden="true"></i><span class="wa-label">Chat with us</span>
+  </a>
+
+  <div class="toast-wrap" aria-live="polite" aria-atomic="true">
+    <div class="toast ak-toast" id="cartToast" role="status" data-bs-delay="2200">
+      <div class="toast-body"><span class="tick"><i class="bi bi-check-lg"></i></span><span id="toastText">Added to cart</span></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+
+    /* =======================================================
+       SETTINGS — edit these
+       ======================================================= */
+    const CONFIG = {
+      whatsappNumber: '919999999999',              // country code + number, no "+" or spaces
+      dealEnd: '2026-11-30T23:59:59+05:30',         // Back to School combo end (IST)
+      freeShippingAbove: 999,
+      instagram: 'https://www.instagram.com/amigo___kid'
+    };
+
+    /* Category identity colours */
+    const CATEGORIES = {
+      shoes:      { label: 'Shoes',          color: '#FF1F8E', icon: 'bi-stars' },
+      bags:       { label: 'School Bags',    color: '#00BDF2', icon: 'bi-backpack' },
+      sunglasses: { label: 'Sunglasses',     color: '#E0D400', icon: 'bi-sunglasses' },
+      bellies:    { label: "Girls' Bellies", color: '#B0287A', icon: 'bi-heart' }
+    };
+
+    /* Stock photo helper (Unsplash, free licence). Replace with your own product photos:
+       just set image: 'assets/products/your-photo.webp' */
+    const U = (id, w = 600) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&h=${w}&q=70`;
+
+    /* =======================================================
+       MY PRODUCTS — replace with real ones
+       - image: product photo path or URL
+       - url:   product page link
+       - tag:   'NEW', 'SALE' or ''
+       - list:  'new' (New Arrivals) or 'best' (Bestsellers)
+       ======================================================= */
+    const PRODUCTS = [
+      { id: 'p1', list: 'new',  name: 'Bounce Velcro Sneakers',       category: 'shoes',      price: 799, mrp: 1199, tag: 'NEW',  rating: 4.8, reviews: 126, image: U('1678192569393-c7aff066e5bd'), url: '/products/bounce-velcro-sneakers' },
+      { id: 'p2', list: 'new',  name: 'Explorer School Backpack',     category: 'bags',       price: 899, mrp: 1299, tag: 'NEW',  rating: 4.7, reviews: 88,  image: U('1599868082389-59b00bb8760d'), url: '/products/explorer-school-backpack' },
+      { id: 'p3', list: 'new',  name: 'Cool Shades UV400 Sunglasses', category: 'sunglasses', price: 349, mrp: 599,  tag: 'SALE', rating: 4.6, reviews: 64,  image: U('1577803645773-f96470509666'), url: '/products/cool-shades-uv400' },
+      { id: 'p4', list: 'new',  name: 'Blush Pink Ballet Bellies',    category: 'bellies',    price: 649, mrp: 999,  tag: 'NEW',  rating: 4.9, reviews: 102, image: U('1497319892902-e0a47680bb6b'), url: '/products/blush-pink-bellies' },
+
+      { id: 'b1', list: 'best', name: 'Ocean Blue Kids Sneakers',     category: 'shoes',      price: 999, mrp: 1499, tag: 'SALE', rating: 4.9, reviews: 241, image: U('1678192568444-78b428b7cd1a'), url: '/products/ocean-blue-sneakers' },
+      { id: 'b2', list: 'best', name: 'Mini Adventurer Backpack',     category: 'bags',       price: 749, mrp: 1099, tag: '',     rating: 4.8, reviews: 187, image: U('1542422784-cd6a92a7e4b3'),      url: '/products/mini-adventurer-backpack' },
+      { id: 'b3', list: 'best', name: 'Retro Round Kids Sunglasses',  category: 'sunglasses', price: 299, mrp: 499,  tag: 'SALE', rating: 4.7, reviews: 156, image: U('1511499767150-a48a237f0083'), url: '/products/retro-round-sunglasses' },
+      { id: 'b4', list: 'best', name: 'Petal Pink Baby Bellies',      category: 'bellies',    price: 599, mrp: 899,  tag: '',     rating: 4.8, reviews: 133, image: U('1742390671609-9811019fe538'), url: '/products/petal-pink-bellies' },
+      { id: 'b5', list: 'best', name: 'First Steps Soft Shoes',       category: 'shoes',      price: 699, mrp: 999,  tag: '',     rating: 4.6, reviews: 98,  image: U('1718296238829-a2f51b2f6759'), url: '/products/first-steps-soft-shoes' },
+      { id: 'b6', list: 'best', name: 'Sunset Kids Shades',           category: 'sunglasses', price: 329, mrp: 549,  tag: 'SALE', rating: 4.8, reviews: 112, image: U('1785672021160-29cccd65500d'), url: '/products/sunset-kids-shades' }
+    ];
+
+    /* Instagram tiles (replace with your real post photos) */
+    const INSTA = [
+      ['1542422784-cd6a92a7e4b3', 'Toddler with a blue backpack'],
+      ['1513091250092-b06c2b7981bc', 'Pink knit baby shoes'],
+      ['1678192568478-9488ee55def6', 'Blue kids shoes'],
+      ['1508296695146-257a814070b4', 'White-frame sunglasses'],
+      ['1718296238829-a2f51b2f6759', 'Baby shoes on a bed'],
+      ['1470116892389-0de5d9770b2c', 'Holding a blue kids shoe']
+    ];
+
+    /* =======================================================
+       HELPERS
+       ======================================================= */
+    const $  = (s, c = document) => c.querySelector(s);
+    const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+    const rupee = n => '₹' + Number(n).toLocaleString('en-IN');
+    const esc = s => String(s).replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
+    const waLink = msg => `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(msg)}`;
+    const byId = id => PRODUCTS.find(p => p.id === id);
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) document.documentElement.classList.add('no-motion');
+    const store = {
+      get(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } },
+      set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { /* storage blocked */ } }
+    };
+
+    $$('[data-wa]').forEach(a => { a.href = waLink(a.dataset.wa); });
+
+    /* If a photo fails to load, show a neat placeholder instead of a broken image */
+    function watchImages(root = document) {
+      $$('img[data-fallback]', root).forEach(img => {
+        const fail = () => img.parentElement.classList.add('img-failed');
+        if (img.complete && img.naturalWidth === 0) fail();
+        else img.addEventListener('error', fail, { once: true });
+      });
+    }
+
+    /* =======================================================
+       PRODUCT RENDERING
+       ======================================================= */
+    function starsHTML(r) {
+      let h = '';
+      for (let i = 1; i <= 5; i++) h += r >= i ? '<i class="bi bi-star-fill"></i>' : (r >= i - .5 ? '<i class="bi bi-star-half"></i>' : '<i class="bi bi-star"></i>');
+      return h;
+    }
+
+    function cardHTML(p) {
+      const c = CATEGORIES[p.category];
+      const off = p.mrp > p.price ? Math.round((1 - p.price / p.mrp) * 100) : 0;
+      const wished = wish.has(p.id);
+      return `
+        <article class="p-card" style="--cat:${c.color}">
+          <div class="p-media">
+            <img src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy" decoding="async" width="600" height="600" data-fallback>
+            <span class="fallback" aria-hidden="true"><i class="bi ${c.icon}"></i></span>
+            ${p.tag ? `<span class="p-sticker${p.tag === 'SALE' ? ' sale' : ''}">${esc(p.tag)}</span>` : ''}
+            <button class="p-wish${wished ? ' active' : ''}" type="button" data-wish="${p.id}" aria-pressed="${wished}" aria-label="Add ${esc(p.name)} to wishlist">
+              <i class="bi ${wished ? 'bi-heart-fill' : 'bi-heart'}"></i>
+            </button>
+            <div class="p-quick d-none d-lg-block">
+              <button class="btn-ak btn-ak-dark btn-ak-sm w-100" type="button" data-add="${p.id}" tabindex="-1" aria-hidden="true"><i class="bi bi-bag-plus"></i> Quick add</button>
+            </div>
+          </div>
+          <div class="p-body">
+            <span class="p-cat">${esc(c.label)}</span>
+            <h3 class="p-name"><a href="${esc(p.url)}">${esc(p.name)}</a></h3>
+            <div class="p-rating" aria-label="Rated ${p.rating} out of 5">${starsHTML(p.rating)}<span>${p.rating} (${p.reviews})</span></div>
+            <div class="p-price-row">
+              <span class="p-price">${rupee(p.price)}</span>
+              ${off ? `<s class="p-mrp" aria-label="MRP ${rupee(p.mrp)}">${rupee(p.mrp)}</s><span class="p-off">${off}% off</span>` : ''}
+            </div>
+            <button class="btn-ak btn-ak-pink btn-ak-sm" type="button" data-add="${p.id}"><i class="bi bi-bag-plus"></i> Add to Cart</button>
+          </div>
+        </article>`;
+    }
+
+    let wish = new Set(store.get('ak_wish', []));
+    let cart = store.get('ak_cart', []).filter(i => byId(i.id));
+
+    $('#newGrid').innerHTML = PRODUCTS.filter(p => p.list === 'new').map(p => `<div class="col" data-reveal="up">${cardHTML(p)}</div>`).join('');
+    $('#bestScroller').innerHTML = PRODUCTS.filter(p => p.list === 'best').map(p => `<div class="slide" data-reveal="right">${cardHTML(p)}</div>`).join('');
+    $('#instaGrid').innerHTML = INSTA.map(([id, alt], i) => `
+      <a class="insta-tile" data-reveal="zoom" href="${CONFIG.instagram}" target="_blank" rel="noopener" aria-label="Instagram post ${i + 1}: ${esc(alt)}">
+        <img src="${U(id, 400)}" alt="${esc(alt)}" loading="lazy" decoding="async" width="400" height="400" data-fallback>
+        <span class="fallback" aria-hidden="true"><i class="bi bi-instagram"></i></span>
+        <span class="ov"><i class="bi bi-instagram"></i></span>
+      </a>`).join('');
+    watchImages();
+
+    /* =======================================================
+       SCROLL REVEAL (IntersectionObserver)
+       ======================================================= */
+    $$('[data-stagger]').forEach(group => {
+      [...group.children].forEach((el, i) => {
+        const target = el.matches('[data-reveal]') ? el : el.querySelector('[data-reveal]');
+        if (target && !target.style.getPropertyValue('--d')) target.style.setProperty('--d', (i * 0.09).toFixed(2) + 's');
+      });
+    });
+    const revealEls = $$('[data-reveal]');
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      revealEls.forEach(el => el.classList.add('in'));
+    } else {
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) { entry.target.classList.add('in'); io.unobserve(entry.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      revealEls.forEach(el => io.observe(el));
+    }
+
+    /* =======================================================
+       SCROLL EFFECTS: progress bar, header, parallax, back-to-top
+       ======================================================= */
+    const header = $('#siteHeader');
+    const bar = $('#scrollBar');
+    const toTop = $('#toTop');
+    const parallaxEls = reduceMotion ? [] : $$('[data-parallax]');
+    let ticking = false;
+
+    function onScroll() {
+      const y = window.scrollY;
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.transform = `scaleX(${max > 0 ? Math.min(y / max, 1) : 0})`;
+      header.classList.toggle('scrolled', y > 10);
+      toTop.classList.toggle('show', y > 700);
+
+      const vh = window.innerHeight;
+      parallaxEls.forEach(el => {
+        const r = el.parentElement.getBoundingClientRect();
+        if (r.bottom < -200 || r.top > vh + 200) return;           // off screen: skip
+        const centre = r.top + r.height / 2 - vh / 2;
+        // uses the `translate` property so it stacks with float/rotate animations
+        el.style.translate = `0 ${(-centre * parseFloat(el.dataset.parallax)).toFixed(1)}px`;
+      });
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(onScroll); ticking = true; } }, { passive: true });
+    window.addEventListener('resize', onScroll);
+    onScroll();
+    toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }));
+
+    /* =======================================================
+       WISHLIST + CART
+       ======================================================= */
+    function setCount(el, n) {
+      const changed = el.textContent !== String(n);
+      el.textContent = n; el.dataset.zero = n === 0 ? 'true' : 'false';
+      if (changed && n > 0) { el.classList.remove('pop'); void el.offsetWidth; el.classList.add('pop'); }
+    }
+
+    function renderCart() {
+      const qty = cart.reduce((s, i) => s + i.qty, 0);
+      const total = cart.reduce((s, i) => s + byId(i.id).price * i.qty, 0);
+      setCount($('#cartCount'), qty);
+      $('#cartTotal').textContent = rupee(total);
+
+      const list = $('#cartItems');
+      if (!cart.length) {
+        list.innerHTML = `<div class="text-center py-5">
+            <div class="mx-auto mb-3 d-grid" style="width:84px;height:84px;border-radius:50%;background:var(--ak-soft);place-items:center;font-size:2rem;color:var(--ak-pink)"><i class="bi bi-bag-heart"></i></div>
+            <p class="fw-semibold mb-1">Your cart is empty</p>
+            <p class="small text-secondary">Little feet are waiting for big style!</p>
+            <a href="#new-arrivals" class="btn-ak btn-ak-pink btn-ak-sm" data-bs-dismiss="offcanvas">Start shopping</a>
+          </div>`;
+        $('#cartFooter').hidden = true;
+        return;
+      }
+      $('#cartFooter').hidden = false;
+      list.innerHTML = cart.map(i => {
+        const p = byId(i.id), c = CATEGORIES[p.category];
+        return `<div class="cart-item">
+            <div class="cart-thumb position-relative"><img src="${esc(p.image)}" alt="" width="68" height="68" data-fallback><span class="fallback position-absolute top-0 start-0 w-100 h-100" style="place-items:center;color:${c.color}"><i class="bi ${c.icon}"></i></span></div>
+            <div class="flex-grow-1" style="min-width:0">
+              <div class="fw-semibold lh-sm">${esc(p.name)}</div>
+              <div class="fw-semibold" style="color:var(--ak-pink)">${rupee(p.price)}</div>
+              <div class="qty mt-1">
+                <button type="button" data-qty="-1" data-id="${p.id}" aria-label="Decrease quantity">−</button>
+                <span>${i.qty}</span>
+                <button type="button" data-qty="1" data-id="${p.id}" aria-label="Increase quantity">+</button>
+              </div>
+            </div>
+            <button class="ak-icon-btn text-secondary" type="button" data-remove="${p.id}" aria-label="Remove ${esc(p.name)}"><i class="bi bi-trash3"></i></button>
+          </div>`;
+      }).join('');
+      watchImages(list);
+
+      const left = CONFIG.freeShippingAbove - total;
+      $('#cartShipNote').textContent = left > 0 ? `Add ${rupee(left)} more for FREE delivery` : 'You get FREE delivery!';
+
+      const lines = cart.map(i => { const p = byId(i.id); return `• ${p.name} x${i.qty} = ${rupee(p.price * i.qty)}`; });
+      $('#cartWa').href = waLink(`Hi AMIGO Kid! I'd like to order:\n${lines.join('\n')}\nTotal: ${rupee(total)}\n\nName:\nAddress:\nPincode:\nPayment: COD / UPI`);
+    }
+
+    function saveCart() { store.set('ak_cart', cart); renderCart(); }
+
+    function addToCart(id) {
+      const item = cart.find(i => i.id === id);
+      item ? item.qty++ : cart.push({ id, qty: 1 });
+      saveCart();
+      $('#toastText').textContent = `${byId(id).name} added to cart`;
+      if (window.bootstrap) bootstrap.Toast.getOrCreateInstance($('#cartToast')).show();
+    }
+
+    function toggleWish(id) {
+      wish.has(id) ? wish.delete(id) : wish.add(id);
+      store.set('ak_wish', [...wish]);
+      setCount($('#wishCount'), wish.size);
+      $$(`[data-wish="${id}"]`).forEach(btn => {
+        const on = wish.has(id);
+        btn.classList.toggle('active', on);
+        btn.setAttribute('aria-pressed', on);
+        btn.querySelector('i').className = 'bi ' + (on ? 'bi-heart-fill' : 'bi-heart');
+      });
+    }
+
+    document.addEventListener('click', e => {
+      const add = e.target.closest('[data-add]');
+      if (add) {
+        add.classList.remove('is-bounce'); void add.offsetWidth; add.classList.add('is-bounce');
+        addToCart(add.dataset.add); return;
+      }
+      const w = e.target.closest('[data-wish]');
+      if (w) { toggleWish(w.dataset.wish); return; }
+      const q = e.target.closest('[data-qty]');
+      if (q) {
+        const item = cart.find(i => i.id === q.dataset.id);
+        if (item) { item.qty += Number(q.dataset.qty); if (item.qty < 1) cart = cart.filter(i => i !== item); saveCart(); }
+        return;
+      }
+      const r = e.target.closest('[data-remove]');
+      if (r) { cart = cart.filter(i => i.id !== r.dataset.remove); saveCart(); }
+    });
+
+    setCount($('#wishCount'), wish.size);
+    renderCart();
+
+    /* Announcement rotator (mobile shows one message at a time) */
+    const msgs = $$('.ak-announce .msg');
+    let mi = 0;
+    setInterval(() => {
+      msgs[mi].classList.remove('active');
+      mi = (mi + 1) % msgs.length;
+      msgs[mi].classList.add('active');
+    }, 3500);
+
+    /* =======================================================
+       COUNTDOWN (with a little flip on change)
+       ======================================================= */
+    const end = new Date(CONFIG.dealEnd).getTime();
+    const cdEls = { d: $('[data-cd="d"]'), h: $('[data-cd="h"]'), m: $('[data-cd="m"]'), s: $('[data-cd="s"]') };
+    const pad = n => String(n).padStart(2, '0');
+    const setNum = (el, v) => {
+      if (el.textContent === v) return;
+      el.textContent = v;
+      if (!reduceMotion) { el.classList.remove('flip'); void el.offsetWidth; el.classList.add('flip'); }
+    };
+    function tick() {
+      let diff = Math.max(0, end - Date.now());
+      const d = Math.floor(diff / 864e5); diff %= 864e5;
+      const h = Math.floor(diff / 36e5);  diff %= 36e5;
+      const m = Math.floor(diff / 6e4);   diff %= 6e4;
+      const s = Math.floor(diff / 1e3);
+      setNum(cdEls.d, pad(d)); setNum(cdEls.h, pad(h)); setNum(cdEls.m, pad(m)); setNum(cdEls.s, pad(s));
+      if (end - Date.now() <= 0) {
+        $('#dealBtn').innerHTML = 'See current offers <i class="bi bi-arrow-right"></i>';
+        clearInterval(timer);
+      }
+    }
+    const timer = setInterval(tick, 1000); tick();
+
+    /* =======================================================
+       BESTSELLER CAROUSEL CONTROLS
+       ======================================================= */
+    const scroller = $('#bestScroller');
+    const prog = $('#bestProgress');
+    const prevBtn = $('[data-scroll="prev"]'), nextBtn = $('[data-scroll="next"]');
+    function updateScroller() {
+      const max = scroller.scrollWidth - scroller.clientWidth;
+      const ratio = scroller.clientWidth / scroller.scrollWidth;
+      const pos = max > 0 ? scroller.scrollLeft / max : 0;
+      prog.style.width = Math.max(ratio, ratio + (1 - ratio) * pos) * 100 + '%';
+      prevBtn.disabled = scroller.scrollLeft <= 4;
+      nextBtn.disabled = scroller.scrollLeft >= max - 4;
+    }
+    $$('[data-scroll]').forEach(btn => btn.addEventListener('click', () => {
+      const step = scroller.querySelector('.slide').getBoundingClientRect().width + 16;
+      scroller.scrollBy({ left: btn.dataset.scroll === 'next' ? step : -step, behavior: 'smooth' });
+    }));
+    scroller.addEventListener('scroll', updateScroller, { passive: true });
+    window.addEventListener('resize', updateScroller);
+    updateScroller();
+
+    /* =======================================================
+       SIGNUP FORM
+       ======================================================= */
+    $('#signupForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const input = $('#signupInput'), msg = $('#signupMsg');
+      const v = input.value.trim();
+      const phone = v.replace(/[\s-]/g, '');
+      const isPhone = /^(\+?91)?[6-9]\d{9}$/.test(phone);
+      const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
+      if (!isPhone && !isEmail) {
+        msg.className = 'signup-msg mt-2 mb-0 err';
+        msg.textContent = 'Please enter a valid 10-digit WhatsApp number or email.';
+        input.setAttribute('aria-invalid', 'true'); input.focus();
+        return;
+      }
+      input.removeAttribute('aria-invalid');
+      // TODO: send `v` to your backend / Shopify / Mailchimp / WhatsApp API here
+      msg.className = 'signup-msg mt-2 mb-0 ok';
+      msg.textContent = isPhone ? "You're in! Offers will come to your WhatsApp." : "You're in! Check your inbox for offers.";
+      e.target.reset();
+    });
+
+    $('#year').textContent = new Date().getFullYear();
+  });
+  </script>
+</body>
+</html>
